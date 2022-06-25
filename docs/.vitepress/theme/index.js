@@ -1,6 +1,6 @@
-import DefaultTheme  from "vitepress/theme";
+import DefaultTheme from "vitepress/theme";
 
 // Import customisation CSS.
-import '../css/custom.css'
+import "../css/custom.css";
 
-export default DefaultTheme
+export default DefaultTheme;
