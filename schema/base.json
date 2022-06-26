@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhruvkb.github.io/reschume/schema/base",
+
+  "title": "Base definitions",
+  "description": "Contains definitions for data types shared by many schema files.",
+
+  "$defs": {
+    "period": {
+      "title": "Period",
+      "description": "Represents the time period between a start and end date. For active periods, the end date can be omitted.",
+
+      "type": "object",
+      "properties": {
+        "start": { "$ref": "#/$defs/date" },
+        "end": { "$ref": "#/$defs/date" }
+      },
+      "required": ["start"],
+
+      "examples": [
+        { "start": [2020, 12], "end": [2021, 1, 1] },
+        { "start": [2019] }
+      ]
+    },
+    "date": {
+      "title": "Date",
+      "description": "Represents a date as an array consisting of year, month and date respectively. Only the year is required.",
+
+      "type": "array",
+      "prefixItems": [
+        { "type": "integer", "minimum": 1 },
+        { "type": "integer", "minimum": 1, "maximum": 12 },
+        { "type": "integer", "minimum": 1, "maximum": 31 }
+      ],
+      "items": false,
+      "minItems": 1,
+
+      "examples": [[2021, 1, 1], [2020, 12], [2019]]
+    }
+  }
+}
