@@ -1,3 +1,10 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema"
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhruvkb.github.io/reschume/schema/resume",
+
+  "type": "object",
+  "properties": {
+    "orgRoles": { "$ref": "/reschume/schema/org_roles" },
+    "epicProjects": { "$ref": "/reschume/schema/epic_projects" }
+  }
 }

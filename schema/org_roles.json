@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhruvkb.github.io/reschume/schema/org_roles",
+
+  "title": "Org-roles",
+  "description": "Represents a collection of organisations and roles perfomed at said organisations.",
+
+  "type": "array",
+  "items": { "$ref": "#/$defs/org" },
+
+  "$defs": {
+    "org": {
+      "title": "Org",
+      "description": "Represents an organisation that offers multiple roles.",
+
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "shortName": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+
+        "children": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/role" }
+        }
+      },
+      "required": ["id", "name"],
+
+      "examples": [
+        {
+          "id": "creative_commons",
+          "name": "Creative Commons",
+          "shortName": "CC",
+          "url": "https://creativecommons.org",
+          "children": [
+            { "id": "project_maintainer", "name": "Project maintainer" },
+            { "id": "gsoc_engineer", "name": "GSoC engineer" }
+          ]
+        }
+      ]
+    },
+    "role": {
+      "title": "Role",
+      "description": "Represents a job performed at an organisation.",
+
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "summary": { "type": "string" },
+        "highlights": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "type": {
+          "enum": [
+            "foss-contributor",
+            "part-timer",
+            "full-timer",
+            "intern",
+            "contractor"
+          ]
+        },
+        "period": { "$ref": "/reschume/schema/base#/$defs/period" }
+      },
+      "required": ["id", "name"],
+
+      "examples": [
+        {
+          "id": "gsoc_engineer",
+          "name": "GSoC engineer",
+          "summary": "Developed Vocabulary, the design library of Creative Commons.",
+          "highlights": [
+            "Conceived, designed & developed Vocabulary from scratch.",
+            "Initiated & supported Vocabulary integration with CC sites."
+          ],
+          "type": "foss-contributor",
+          "period": {
+            "start": [2019, 5],
+            "end": [2019, 8]
+          }
+        }
+      ]
+    }
+  }
+}

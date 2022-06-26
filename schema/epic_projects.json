@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhruvkb.github.io/reschume/schema/epic_projects",
+
+  "title": "Epic-projects",
+  "description": "Represents a collection of epics and projects that were a part of said epics.",
+
+  "type": "array",
+  "items": { "$ref": "#/$defs/epic" },
+
+  "$defs": {
+    "epic": {
+      "title": "Epic",
+      "description": "Represents an endeavour that encompasses multiple projects.",
+
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+
+        "children": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/project" }
+        }
+      },
+      "required": ["id", "name"],
+
+      "examples": [
+        {
+          "id": "portfolio",
+          "name": "Portfolio",
+          "url": "https://dhruvkb.dev",
+          "children": [
+            { "id": "website", "name": "Website" },
+            { "id": "resume", "name": "Resume" },
+            { "id": "reschume", "name": "Réschumé" }
+          ]
+        }
+      ]
+    },
+    "project": {
+      "title": "Project",
+      "description": "Represents a project that forms a part of a larger epic.",
+
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "summary": { "type": "string" },
+        "role": { "type": "string" },
+        "highlights": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "url": { "type": "string", "format": "uri" },
+        "technologies": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/technology" }
+        },
+        "period": { "$ref": "/reschume/schema/base#/$defs/period" }
+      },
+      "required": ["id", "name"],
+
+      "examples": [
+        {
+          "id": "reschume",
+          "name": "Réschumé",
+          "summary": "A comprehensive schema for documenting résumés.",
+          "highlights": ["", "", ""],
+          "url": "https://dhruvkb.github.io/reschume/",
+          "technologies": [
+            { "name": "JSON", "icon": "json" },
+            { "name": "TypeScript", "icon": "typescript" }
+          ],
+          "period": {
+            "start": [2022, 6]
+          }
+        }
+      ]
+    },
+
+    "technology": {
+      "title": "Technology",
+      "description": "Represents a language or framework used in a project.",
+
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "icon": { "type": "string" }
+      },
+      "required": ["name"],
+
+      "examples": [
+        { "name": "JavaScript", "icon": "javascript" },
+        { "name": "JSON" }
+      ]
+    }
+  }
+}
