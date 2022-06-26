@@ -27,6 +27,6 @@
     "vue": "^3.2.37"
   },
   "lint-staged": {
-    "*.{js,css,md,vue}": "prettier --write"
+    "*.{json,js,css,md,vue}": "prettier --write"
   }
 }
