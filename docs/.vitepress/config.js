@@ -13,5 +13,12 @@ export default {
 
   themeConfig: {
     logo: "/logo.svg", // automatically uses `base`
+    nav: [
+      { text: "Schemas", link: "/schemas" },
+      { text: "GitHub ↗", link: "https://github.com/dhruvkb/reschume" },
+    ],
+    footer: {
+      message: "Réschumé is 100% open-source.",
+    },
   },
 };
