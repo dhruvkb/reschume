@@ -2,11 +2,7 @@
 
 **Réschumé** aims to create a comprehensive schema for documenting résumés.
 
-## Goals
-
-- Establish a consistent standard capable of representing a résumé in a versatile computer-readable manner.
-- Provide base tooling to generate, manipulate and consume this raw information.
-- Provide base tooling to convert this information to well-formatted human-readable documents.
+Please refer to the [documentation](https://dhruvkb.github.io/reschume/).
 
 ## Schema
 

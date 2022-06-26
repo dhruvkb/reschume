@@ -6,4 +6,12 @@
   --vp-c-brand-lighter: #7dd3fc;
   --vp-c-brand-dark: #0284c7;
   --vp-c-brand-darker: #0369a1;
+
+  /* Home heading gradient */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    0deg,
+    #14b8a6,
+    #0ea5e9
+  );
 }
