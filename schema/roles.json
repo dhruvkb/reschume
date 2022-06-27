@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://dhruvkb.github.io/reschume/schema/org_roles",
+  "$id": "https://dhruvkb.github.io/reschume/schema/roles",
 
-  "title": "Org-roles",
+  "title": "Roles",
   "description": "Represents a collection of organisations and roles perfomed at said organisations.",
 
   "type": "array",

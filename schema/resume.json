@@ -4,8 +4,8 @@
 
   "type": "object",
   "properties": {
-    "orgRoles": { "$ref": "/reschume/schema/org_roles" },
-    "epicProjects": { "$ref": "/reschume/schema/epic_projects" },
+    "roles": { "$ref": "/reschume/schema/roles" },
+    "projects": { "$ref": "/reschume/schema/projects" },
     "education": { "$ref": "/reschume/schema/education" }
   }
 }

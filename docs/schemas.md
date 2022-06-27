@@ -28,7 +28,7 @@ You can find tools for validating your résumés against these schemas in the JS
   - `date`
   - `period`
 
-- [`epic_projects.json`](/reschume/schema/epic_projects.json)
+- [`projects.json`](/reschume/schema/projects.json)
 
   This schema contains data types pertaining to projects and collections of them, called epics. This schema represents an `array` of `epic` objects and provides the following definitions under `$defs`.
 
@@ -36,7 +36,7 @@ You can find tools for validating your résumés against these schemas in the JS
   - `project`
   - `technology`
 
-- [`org_roles.json`](/reschume/schema/org_roles.json)
+- [`roles.json`](/reschume/schema/roles.json)
 
   This schema contains data types pertaining to roles held at various organisations. This schema represents an `array` of `org` objects and provides the following definitions under `$defs`.
 
