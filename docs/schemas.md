@@ -42,3 +42,10 @@ You can find tools for validating your résumés against these schemas in the JS
 
   - `org`
   - `role`
+
+- [`education.json`](/reschume/schema/education.json)
+
+  This schema contains data types pertaining to certifications obtained from educational institutions. This schema represents an `array` of `institute` objects and provides the following definitions under `$defs`.
+
+  - `institute`
+  - `certification`

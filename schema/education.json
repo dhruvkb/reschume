@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhruvkb.github.io/reschume/schema/education",
+
+  "title": "Education",
+  "description": "Contains information about a person's educational background.",
+
+  "type": "array",
+  "items": { "$ref": "#/$defs/institute" },
+
+  "$defs": {
+    "institute": {
+      "title": "Institute",
+      "description": "Represents an educational institution such as a school or college.",
+
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "shortName": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+
+        "children": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/certification" }
+        }
+      },
+      "required": ["id", "name"],
+
+      "examples": [
+        {
+          "id": "iitr",
+          "name": "Indian Institute of Technology, Roorkee",
+          "shortName": "IIT-R",
+          "url": "https://iitr.ac.in",
+          "children": [
+            {
+              "id": "b_tech",
+              "name": "B. Tech.",
+              "field": "Engineering Physics"
+            }
+          ]
+        }
+      ]
+    },
+    "certification": {
+      "title": "Certification",
+      "description": "Represents a certification that proves successful completion of a course.",
+
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "field": { "type": "string" },
+        "period": { "$ref": "/reschume/schema/base#/$defs/period" },
+        "score": { "type": "string" },
+        "maxScore": { "type": "string" },
+        "courses": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["id", "name", "field"],
+
+      "examples": [
+        {
+          "id": "b_tech",
+          "name": "B. Tech.",
+          "field": "Engineering Physics",
+          "score": "7.2",
+          "maxScore": "10",
+          "courses": ["PHN101 - Introduction to Engineering Physics"]
+        }
+      ]
+    }
+  }
+}
