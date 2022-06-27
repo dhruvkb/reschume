@@ -15,11 +15,15 @@
     "prepare": "husky install",
     "lint": "prettier --check .",
     "format": "prettier --write .",
-    "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "serve": "vitepress serve docs"
+    "validate:eg": "node scripts/validate_eg.mjs",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "devDependencies": {
+    "ajv": "^8.11.0",
+    "ajv-formats": "^2.1.1",
+    "chalk": "^5.0.1",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
@@ -27,6 +31,10 @@
     "vue": "^3.2.37"
   },
   "lint-staged": {
-    "*.{json,js,css,md,vue}": "prettier --write"
+    "*.{json,js,mjs,css,md,vue}": "prettier --write"
+  },
+  "imports": {
+    "#schema/*": "./schema/*",
+    "#sample_data/*": "./sample_data/*"
   }
 }
