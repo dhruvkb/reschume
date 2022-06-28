@@ -36,6 +36,66 @@
       "minItems": 1,
 
       "examples": [[2021, 1, 1], [2020, 12], [2019]]
+    },
+    "address": {
+      "title": "Address",
+      "description": "Represents a physical location for an entity such as an organisation or educational institute.",
+
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "addressLines": {
+              "type": "array",
+              "items": { "type": "string" },
+              "minItems": 1
+            },
+            "postBox": { "type": "number" },
+
+            "city": { "type": "string" },
+            "state": { "type": "string" },
+            "countryCode": { "type": "string", "pattern": "^[A-Z]{2}$" },
+            "postCode": { "type": "integer" },
+
+            "coordinates": {
+              "type": "object",
+              "properties": {
+                "latitude": {
+                  "type": "number",
+                  "minimum": -90,
+                  "maximum": 90
+                },
+                "longitude": {
+                  "type": "number",
+                  "minimum": -180,
+                  "maximum": 180
+                }
+              },
+              "required": ["latitude", "longitude"]
+            }
+          }
+        },
+        { "type": "string" }
+      ],
+
+      "examples": [
+        "Navi Mumbai, India",
+        {
+          "city": "Navi Mumbai",
+          "state": "Maharashtra",
+          "countryCode": "IN",
+          "postCode": 400000
+        },
+        {
+          "addressLines": ["Navi Mumbai - 400000", "Maharashtra, India"]
+        },
+        {
+          "coordinates": {
+            "latitude": 19.033,
+            "longitude": 73.0297
+          }
+        }
+      ]
     }
   }
 }

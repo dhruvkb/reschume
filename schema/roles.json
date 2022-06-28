@@ -19,6 +19,7 @@
         "name": { "type": "string" },
         "shortName": { "type": "string" },
         "url": { "type": "string", "format": "uri" },
+        "address": { "$ref": "/reschume/schema/base#/$defs/address" },
 
         "children": {
           "type": "array",
@@ -33,6 +34,14 @@
           "name": "Creative Commons",
           "shortName": "CC",
           "url": "https://creativecommons.org",
+          "address": {
+            "postBox": 1866,
+            "city": "Mountain View",
+            "state": "California",
+            "countryCode": "US",
+            "postCode": 94042
+          },
+
           "children": [
             { "id": "project_maintainer", "name": "Project maintainer" },
             { "id": "gsoc_engineer", "name": "GSoC engineer" }

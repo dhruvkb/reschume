@@ -19,6 +19,7 @@
         "name": { "type": "string" },
         "shortName": { "type": "string" },
         "url": { "type": "string", "format": "uri" },
+        "address": { "$ref": "/reschume/schema/base#/$defs/address" },
 
         "children": {
           "type": "array",
@@ -33,6 +34,11 @@
           "name": "Indian Institute of Technology, Roorkee",
           "shortName": "IIT-R",
           "url": "https://iitr.ac.in",
+          "address": {
+            "city": "Roorkee",
+            "state": "Haridwar",
+            "countryCode": "IN"
+          },
           "children": [
             {
               "id": "b_tech",
