@@ -9,25 +9,22 @@ The Réschumé schema has been broken down into many different subschemas to mak
 
 ## Schema information
 
-Réschumé schemas are provided as per the [2020-12 edition](https://json-schema.org/specification.html) of the [JSON Schema specification](https://json-schema.org). Efforts will be made to upgrade to newer versions of the specification as they are released.
+### Primary schema
 
-You can find tools for validating your résumés against these schemas in the JSON Schema documentation.
+[`resume.json`](/reschume/schema/resume.json)
 
-## List of schemas
+This is the schema of the top-level résumé object and encapsulates all other subschemas. In the typical use case, you would be validating your résumés against this schema.
 
-- [`resume.json`](/reschume/schema/resume.json)
+<<< @/public/schema/resume.json
 
-  This is the schema of the top-level résumé object and encapsulates all other subschemas. In the typical use case, you would be validating your résumés against this schema.
+### Subschemas
 
-  <<< @/public/schema/resume.json
+- [`education.json`](/reschume/schema/education.json)
 
-- [`base.json`](/reschume/schema/base.json)
+  This schema contains data types pertaining to certifications obtained from educational institutions. This schema represents an `array` of `institute` objects and provides the following definitions under `$defs`.
 
-  This schema contains shared data types used by the other subschemas. It only contains definitions under `$defs`.
-
-  - `date`
-  - `period`
-  - `address`
+  - `institute`
+  - `certification`
 
 - [`projects.json`](/reschume/schema/projects.json)
 
@@ -44,9 +41,18 @@ You can find tools for validating your résumés against these schemas in the JS
   - `org`
   - `role`
 
-- [`education.json`](/reschume/schema/education.json)
+### Helper schema
 
-  This schema contains data types pertaining to certifications obtained from educational institutions. This schema represents an `array` of `institute` objects and provides the following definitions under `$defs`.
+[`base.json`](/reschume/schema/base.json)
 
-  - `institute`
-  - `certification`
+This schema contains shared data types used by the other subschemas. It only contains definitions under `$defs`.
+
+- `date`
+- `period`
+- `address`
+
+## Compliance notice
+
+Réschumé schemas are provided as per the [2020-12 edition](https://json-schema.org/specification.html) of the [JSON Schema specification](https://json-schema.org). Efforts will be made to upgrade to newer versions of the specification as they are released.
+
+You can find tools for validating your résumés against these schemas in the JSON Schema documentation.
