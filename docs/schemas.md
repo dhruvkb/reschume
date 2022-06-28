@@ -27,6 +27,7 @@ You can find tools for validating your résumés against these schemas in the JS
 
   - `date`
   - `period`
+  - `address`
 
 - [`projects.json`](/reschume/schema/projects.json)
 
