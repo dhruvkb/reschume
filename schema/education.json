@@ -69,7 +69,11 @@
           "field": "Engineering Physics",
           "score": "7.2",
           "maxScore": "10",
-          "courses": ["PHN101 - Introduction to Engineering Physics"]
+          "courses": ["PHN101 - Introduction to Engineering Physics"],
+          "period": {
+            "start": [2015],
+            "end": [2019]
+          }
         }
       ]
     }
