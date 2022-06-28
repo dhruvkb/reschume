@@ -71,6 +71,9 @@
             "contractor"
           ]
         },
+        "location": {
+          "enum": ["in-office", "hybrid", "remote"]
+        },
         "period": { "$ref": "/reschume/schema/base#/$defs/period" }
       },
       "required": ["id", "name"],
@@ -85,6 +88,7 @@
             "Initiated & supported Vocabulary integration with CC sites."
           ],
           "type": "foss-contributor",
+          "location": "remote",
           "period": {
             "start": [2019, 5],
             "end": [2019, 8]
