@@ -40,7 +40,7 @@ Object.entries(schemas).forEach(([schemaName, schemaDefinition]) => {
     const examples = defDefinition.examples;
     examples.forEach((example) => {
       let repr;
-      if ("id" in example) repr = example.id;
+      if (typeof example === "object" && "id" in example) repr = example.id;
       else repr = JSON.stringify(example);
 
       console.log(`Validating example ${chalk.italic.blue(repr)}`);
