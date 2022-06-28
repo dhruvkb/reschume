@@ -4,8 +4,8 @@
 
   "type": "object",
   "properties": {
-    "roles": { "$ref": "/reschume/schema/roles" },
+    "education": { "$ref": "/reschume/schema/education" },
     "projects": { "$ref": "/reschume/schema/projects" },
-    "education": { "$ref": "/reschume/schema/education" }
+    "roles": { "$ref": "/reschume/schema/roles" }
   }
 }
