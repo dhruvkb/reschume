@@ -19,6 +19,14 @@ This is the schema of the top-level résumé object and encapsulates all other s
 
 ### Subschemas
 
+- [`bio.json`](/reschume/schema/bio.json)
+
+  This schema contains data types pertaining to personal identification and contact channels for a person. This schema is an `object` with various fields and provides the following definitions under `$defs`.
+
+  - `contact`
+  - `social`
+  - `profile`
+
 - [`education.json`](/reschume/schema/education.json)
 
   This schema contains data types pertaining to certifications obtained from educational institutions. This schema represents an `array` of `institute` objects and provides the following definitions under `$defs`.
