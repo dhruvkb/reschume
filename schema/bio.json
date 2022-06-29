@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhruvkb.github.io/reschume/schema/bio",
+
+  "title": "Bio",
+  "description": "Represents information about a person's identity and ways to contact said person.",
+
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "image": { "type": "string", "format": "uri" },
+
+    "label": { "type": "string" },
+    "summary": { "type": "string" },
+    "introduction": { "type": "string" },
+
+    "contact": { "$ref": "#/$defs/contact" },
+    "social": { "$ref": "#/$defs/social" },
+
+    "address": { "$ref": "/reschume/schema/base#/$defs/address" }
+  },
+  "required": ["name"],
+
+  "examples": [
+    {
+      "name": "Dhruv Bhanushali",
+      "image": "https://www.gravatar.com/avatar/0eab64adad056cff2492e7c407a9aa21?s=256",
+      "label": "Software developer and open-source maintainer",
+      "summary": "Software engineer @ WordPress/Openverse • IIT-R '19",
+      "contact": {
+        "emails": ["user@example.com"],
+        "phones": ["+91 9988776655"]
+      },
+      "social": [
+        { "id": "github", "name": "GitHub", "username": "dhruvkb" },
+        {
+          "id": "linkedin",
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/dhruvkb"
+        }
+      ],
+      "address": {
+        "city": "Navi Mumbai",
+        "state": "Maharashtra",
+        "countryCode": "IN"
+      }
+    }
+  ],
+
+  "$defs": {
+    "contact": {
+      "title": "Contact channels",
+      "description": "Represents a collection of emails and phone numbers to contact the person.",
+
+      "type": "object",
+      "properties": {
+        "emails": {
+          "type": "array",
+          "items": { "type": "string", "format": "email" }
+        },
+        "phones": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+
+      "examples": [
+        { "emails": ["user@example.com"], "phones": ["+91 9988776655"] }
+      ]
+    },
+
+    "social": {
+      "title": "Social presence",
+      "description": "Represents a collection of accounts on social media platforms or professional networks.",
+
+      "type": "array",
+      "items": { "$ref": "#/$defs/profile" },
+
+      "examples": [
+        [
+          { "id": "github", "name": "GitHub", "username": "dhruvkb" },
+          {
+            "id": "linkedin",
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/dhruvkb"
+          }
+        ]
+      ]
+    },
+    "profile": {
+      "title": "Profile",
+      "description": "Represents an account on a social media platform or professional network.",
+
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "username": { "type": "string" },
+        "url": { "type": "string", "format": "uri" }
+      },
+      "required": ["id", "name"],
+      "anyOf": [{ "required": ["username"] }, { "required": ["url"] }],
+
+      "examples": [
+        { "id": "github", "name": "GitHub", "username": "dhruvkb" },
+        {
+          "id": "linkedin",
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/dhruvkb"
+        }
+      ]
+    }
+  }
+}
