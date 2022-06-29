@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://dhruvkb.github.io/reschume/schema/bio",
+  "$id": "https://dhruvkb.github.io/reschume/schema/bio.json",
 
   "title": "Bio",
   "description": "Represents information about a person's identity and ways to contact said person.",
@@ -17,7 +17,7 @@
     "contact": { "$ref": "#/$defs/contact" },
     "social": { "$ref": "#/$defs/social" },
 
-    "address": { "$ref": "/reschume/schema/base#/$defs/address" }
+    "address": { "$ref": "/reschume/schema/base.json#/$defs/address" }
   },
   "required": ["name"],
 

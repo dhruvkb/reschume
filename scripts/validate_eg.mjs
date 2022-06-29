@@ -79,7 +79,7 @@ const validateExamples = (schema, schemaRef, color) => {
 
 Object.entries(schemas).forEach(([schemaName, schemaDefinition]) => {
   const schemaColor = "magentaBright";
-  const schemaPath = `https://dhruvkb.github.io/reschume/schema/${schemaName}`;
+  const schemaPath = `https://dhruvkb.github.io/reschume/schema/${schemaName}.json`;
 
   console.log(`Validating schema ${chalk.italic[schemaColor](schemaName)}`);
   validateExamples(schemaDefinition, schemaPath, schemaColor);

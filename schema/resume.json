@@ -1,12 +1,12 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://dhruvkb.github.io/reschume/schema/resume",
+  "$id": "https://dhruvkb.github.io/reschume/schema/resume.json",
 
   "type": "object",
   "properties": {
-    "bio": { "$ref": "/reschume/schema/bio" },
-    "education": { "$ref": "/reschume/schema/education" },
-    "projects": { "$ref": "/reschume/schema/projects" },
-    "roles": { "$ref": "/reschume/schema/roles" }
+    "bio": { "$ref": "/reschume/schema/bio.json" },
+    "education": { "$ref": "/reschume/schema/education.json" },
+    "projects": { "$ref": "/reschume/schema/projects.json" },
+    "roles": { "$ref": "/reschume/schema/roles.json" }
   }
 }

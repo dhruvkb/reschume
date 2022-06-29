@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://dhruvkb.github.io/reschume/schema/projects",
+  "$id": "https://dhruvkb.github.io/reschume/schema/projects.json",
 
   "title": "Projects",
   "description": "Represents a collection of epics and projects that were a part of said epics.",
@@ -58,7 +58,7 @@
           "type": "array",
           "items": { "$ref": "#/$defs/technology" }
         },
-        "period": { "$ref": "/reschume/schema/base#/$defs/period" }
+        "period": { "$ref": "/reschume/schema/base.json#/$defs/period" }
       },
       "required": ["id", "name"],
 

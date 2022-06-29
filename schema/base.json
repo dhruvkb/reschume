@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://dhruvkb.github.io/reschume/schema/base",
+  "$id": "https://dhruvkb.github.io/reschume/schema/base.json",
 
   "title": "Base definitions",
   "description": "Contains definitions for data types shared by many schema files.",
