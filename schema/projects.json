@@ -58,7 +58,7 @@
           "type": "array",
           "items": { "$ref": "#/$defs/technology" }
         },
-        "period": { "$ref": "/reschume/schema/base.json#/$defs/period" }
+        "period": { "$ref": "base.json#/$defs/period" }
       },
       "required": ["id", "name"],
 

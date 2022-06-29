@@ -4,9 +4,9 @@
 
   "type": "object",
   "properties": {
-    "bio": { "$ref": "/reschume/schema/bio.json" },
-    "education": { "$ref": "/reschume/schema/education.json" },
-    "projects": { "$ref": "/reschume/schema/projects.json" },
-    "roles": { "$ref": "/reschume/schema/roles.json" }
+    "bio": { "$ref": "bio.json" },
+    "education": { "$ref": "education.json" },
+    "projects": { "$ref": "projects.json" },
+    "roles": { "$ref": "roles.json" }
   }
 }

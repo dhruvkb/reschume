@@ -19,7 +19,7 @@
         "name": { "type": "string" },
         "shortName": { "type": "string" },
         "url": { "type": "string", "format": "uri" },
-        "address": { "$ref": "/reschume/schema/base.json#/$defs/address" },
+        "address": { "$ref": "base.json#/$defs/address" },
 
         "children": {
           "type": "array",
@@ -74,7 +74,7 @@
         "location": {
           "enum": ["in-office", "hybrid", "remote"]
         },
-        "period": { "$ref": "/reschume/schema/base.json#/$defs/period" }
+        "period": { "$ref": "base.json#/$defs/period" }
       },
       "required": ["id", "name"],
 

@@ -17,7 +17,7 @@
     "contact": { "$ref": "#/$defs/contact" },
     "social": { "$ref": "#/$defs/social" },
 
-    "address": { "$ref": "/reschume/schema/base.json#/$defs/address" }
+    "address": { "$ref": "base.json#/$defs/address" }
   },
   "required": ["name"],
 

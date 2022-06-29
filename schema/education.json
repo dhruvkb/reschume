@@ -19,7 +19,7 @@
         "name": { "type": "string" },
         "shortName": { "type": "string" },
         "url": { "type": "string", "format": "uri" },
-        "address": { "$ref": "/reschume/schema/base.json#/$defs/address" },
+        "address": { "$ref": "base.json#/$defs/address" },
 
         "children": {
           "type": "array",
@@ -58,7 +58,7 @@
         "id": { "type": "string" },
         "name": { "type": "string" },
         "field": { "type": "string" },
-        "period": { "$ref": "/reschume/schema/base.json#/$defs/period" },
+        "period": { "$ref": "base.json#/$defs/period" },
         "score": { "type": "string" },
         "maxScore": { "type": "string" },
         "courses": {
