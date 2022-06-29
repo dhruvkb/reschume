@@ -1,37 +1,13 @@
-import Ajv2020 from "ajv/dist/2020.js";
-import addFormats from "ajv-formats";
 import chalk from "chalk";
 
+import { getAjv } from "./ajv.mjs";
 import { crunchText } from "./utils.mjs";
 
 import baseSchema from "#schema/base.json" assert { type: "json" };
 import bioSchema from "#schema/bio.json" assert { type: "json" };
-import rolesSchema from "#schema/roles.json" assert { type: "json" };
-import projectsSchema from "#schema/projects.json" assert { type: "json" };
 import educationSchema from "#schema/education.json" assert { type: "json" };
-
-const ajv = new Ajv2020({
-  allErrors: true,
-  strictTuples: false,
-});
-addFormats(ajv);
-
-ajv.addSchema(baseSchema);
-ajv.addSchema(bioSchema);
-ajv.addSchema(rolesSchema);
-ajv.addSchema(projectsSchema);
-ajv.addSchema(educationSchema);
-
-const schemas = {
-  base: baseSchema,
-  bio: bioSchema,
-  roles: rolesSchema,
-  projects: projectsSchema,
-  education: educationSchema,
-};
-
-let successes = 0;
-let failures = 0;
+import projectsSchema from "#schema/projects.json" assert { type: "json" };
+import rolesSchema from "#schema/roles.json" assert { type: "json" };
 
 /**
  * Validate the examples defined inside the given schema.
@@ -76,6 +52,21 @@ const validateExamples = (schema, schemaRef, color) => {
   });
   console.groupEnd();
 };
+
+/* --- Main --- */
+
+const schemas = {
+  base: baseSchema,
+  bio: bioSchema,
+  roles: rolesSchema,
+  projects: projectsSchema,
+  education: educationSchema,
+};
+
+let successes = 0;
+let failures = 0;
+
+const ajv = getAjv();
 
 Object.entries(schemas).forEach(([schemaName, schemaDefinition]) => {
   const schemaColor = "magentaBright";
