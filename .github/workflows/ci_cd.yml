@@ -47,6 +47,9 @@ jobs:
       - name: Validate examples
         run: npm run validate:eg
 
+      - name: Validate sample
+        run: npm run validate:sample
+
   deploy:
     name: Deploy docs
     runs-on: ubuntu-latest
