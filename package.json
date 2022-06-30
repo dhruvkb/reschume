@@ -16,6 +16,7 @@
     "lint": "prettier --check .",
     "format": "prettier --write .",
     "validate:eg": "node scripts/validate_eg.mjs",
+    "validate:sample": "node scripts/validate_sample.mjs",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs"

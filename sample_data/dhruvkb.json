@@ -1,0 +1,435 @@
+{
+  "$schema": "https://dhruvkb.github.io/reschume/schema/resume.json",
+  "bio": {
+    "name": "Dhruv Bhanushali",
+    "image": "https://www.gravatar.com/avatar/0eab64adad056cff2492e7c407a9aa21?s=256",
+    "label": "Software developer and open-source maintainer",
+    "summary": "Software engineer @ WordPress/Openverse • IIT-R '19",
+    "contact": {
+      "emails": ["hi@dhruvkb.dev"]
+    },
+    "social": [
+      {
+        "id": "github",
+        "name": "GitHub",
+        "username": "dhruvkb",
+        "url": "https://github.com/dhruvkb"
+      },
+      {
+        "id": "linkedin",
+        "name": "LinkedIn",
+        "username": "dhruvkb",
+        "url": "https://www.linkedin.com/in/dhruvkb"
+      }
+    ],
+    "address": {
+      "city": "Navi Mumbai",
+      "state": "Maharashtra",
+      "countryCode": "IN"
+    }
+  },
+  "education": [
+    {
+      "id": "iitr",
+      "name": "Indian Institute of Technology, Roorkee",
+      "shortName": "IIT-R",
+      "url": "https://iitr.ac.in",
+      "address": {
+        "city": "Roorkee",
+        "state": "Haridwar",
+        "countryCode": "IN"
+      },
+      "children": [
+        {
+          "id": "b_tech",
+          "name": "B. Tech.",
+          "field": "Engineering Physics"
+        }
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "id": "automattic",
+      "name": "Automattic",
+      "url": "https://automattic.com",
+      "children": [
+        {
+          "id": "code_wrangler",
+          "name": "Code wrangler",
+          "summary": "Worked as a full-stack engineer on the Openverse search-engine for openly-licensed media.",
+          "highlights": ["Contributed to everything!"],
+          "period": {
+            "start": [2021, 4]
+          },
+          "type": "full-timer",
+          "epicSlugs": ["openverse"]
+        }
+      ]
+    },
+    {
+      "id": "wordpress",
+      "name": "WordPress",
+      "shortName": "WP",
+      "url": "https://wordpress.org/openverse/",
+      "children": [
+        {
+          "id": "project_maintainer",
+          "name": "Project maintainer",
+          "period": {
+            "start": [2021, 4]
+          },
+          "type": "foss-contributor",
+          "epicSlugs": ["openverse"]
+        }
+      ]
+    },
+    {
+      "id": "center_of_ci",
+      "name": "Center of CI",
+      "shortName": "CCI",
+      "url": "https://centerofci.org",
+      "children": [
+        {
+          "id": "software_engineer",
+          "name": "Software engineer",
+          "period": {
+            "start": [2021, 6]
+          },
+          "type": "part-timer"
+        }
+      ]
+    },
+    {
+      "id": "browserstack",
+      "name": "BrowserStack",
+      "url": "https://browserstack.com",
+      "children": [
+        {
+          "id": "software_engineer",
+          "name": "Software engineer",
+          "period": {
+            "start": [2021, 2],
+            "end": [2021, 3]
+          },
+          "type": "full-timer"
+        }
+      ]
+    },
+    {
+      "id": "creative_commons",
+      "name": "Creative Commons",
+      "shortName": "CC",
+      "url": "https://opensource.creativecommons.org",
+      "children": [
+        {
+          "id": "project_maintainer",
+          "name": "Project maintainer",
+          "period": {
+            "start": [2019, 9]
+          },
+          "type": "foss-contributor",
+          "epicSlugs": ["vocabulary"]
+        },
+        {
+          "id": "foss_community_coordinator",
+          "name": "FOSS community coordinator",
+          "period": {
+            "start": [2020, 7],
+            "end": [2020, 12]
+          },
+          "type": "contractor"
+        },
+        {
+          "id": "foss_internship_mentor",
+          "name": "Internship mentor",
+          "period": {
+            "start": [2019, 12],
+            "end": [2020, 12]
+          },
+          "type": "foss-contributor"
+        },
+        {
+          "id": "gsoc_engineer",
+          "name": "GSoC engineer",
+          "period": {
+            "start": [2019, 5],
+            "end": [2019, 8]
+          },
+          "type": "intern"
+        }
+      ]
+    },
+    {
+      "id": "img",
+      "name": "IMG, IIT Roorkee",
+      "shortName": "IMG IIT-R",
+      "url": "https://img.channeli.in",
+      "children": [
+        {
+          "id": "chief_coordinator_tech",
+          "name": "Chief coordinator (tech)",
+          "period": {
+            "start": [2016, 1],
+            "end": [2019, 4]
+          },
+          "type": "part-timer",
+          "epicSlugs": ["omniport"]
+        }
+      ]
+    },
+    {
+      "id": "fampay",
+      "name": "FamPay",
+      "url": "https://fampay.in",
+      "children": [
+        {
+          "id": "software_engineer",
+          "name": "Software engineer",
+          "period": {
+            "start": [2019, 11],
+            "end": [2019, 12]
+          },
+          "type": "part-timer"
+        }
+      ]
+    },
+    {
+      "id": "hackerearth",
+      "name": "HackerEarth",
+      "url": "https://hackerearth.com",
+      "children": [
+        {
+          "id": "infrastructure_engineer",
+          "name": "Infrastructure engineer",
+          "period": {
+            "start": [2018, 5],
+            "end": [2018, 7]
+          },
+          "type": "intern"
+        },
+        {
+          "id": "software_engineer",
+          "name": "Software engineer",
+          "period": {
+            "start": [2017, 5],
+            "end": [2017, 7]
+          },
+          "type": "intern"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "pls",
+      "name": "pls",
+      "children": [
+        {
+          "id": "app",
+          "name": "CLI application",
+          "url": "https://pypi.org/project/pls/",
+          "role": "Creator",
+          "urlLabel": "PyPI package for pls",
+          "technologies": [
+            {
+              "name": "Python",
+              "icon": "python"
+            }
+          ]
+        },
+        {
+          "id": "documentation",
+          "name": "Documentation",
+          "url": "https://dhruvkb.github.io/pls/",
+          "role": "Author",
+          "urlLabel": "User documentation for pls",
+          "technologies": [
+            {
+              "name": "Markdown",
+              "icon": "markdown"
+            },
+            {
+              "name": "Vue",
+              "icon": "vuedotjs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "openverse",
+      "name": "Openverse",
+      "children": [
+        {
+          "id": "frontend",
+          "name": "Search engine",
+          "url": "https://github.com/WordPress/openverse-frontend/",
+          "urlLabel": "GitHub repo for Openverse frontend",
+          "technologies": [
+            {
+              "name": "JavaScript",
+              "icon": "javascript"
+            },
+            {
+              "name": "Nuxt",
+              "icon": "nuxtdotjs"
+            },
+            {
+              "name": "Tailwind",
+              "icon": "tailwindcss"
+            }
+          ]
+        },
+        {
+          "id": "backend",
+          "name": "API",
+          "url": "https://github.com/WordPress/openverse-api/",
+          "urlLabel": "GitHub repo for Openverse API",
+          "technologies": [
+            {
+              "name": "Python",
+              "icon": "python"
+            },
+            {
+              "name": "Django",
+              "icon": "django"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seeelaye",
+      "name": "see·el·aye",
+      "children": [
+        {
+          "id": "seeelaye",
+          "name": "CLI emulator",
+          "url": "https://seeelaye.vercel.app",
+          "urlLabel": "Developer documentation for see·el·aye",
+          "technologies": [
+            {
+              "name": "TypeScript",
+              "icon": "typescript"
+            },
+            {
+              "name": "Vue",
+              "icon": "vuedotjs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vocabulary",
+      "name": "Vocabulary",
+      "children": [
+        {
+          "id": "vocabulary",
+          "name": "UI components",
+          "url": "https://github.com/creativecommons/vocabulary/",
+          "urlLabel": "GitHub repo for Vocabulary",
+          "technologies": [
+            {
+              "name": "JavaScript",
+              "icon": "javascript"
+            },
+            {
+              "name": "Vue",
+              "icon": "vuedotjs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "omniport",
+      "name": "Omniport",
+      "children": [
+        {
+          "id": "infrastructure",
+          "name": "Infrastructure",
+          "url": "https://github.com/IMGIITRoorkee/omniport-docker/",
+          "urlLabel": "GitHub repo for Omniport infrastructure",
+          "technologies": [
+            {
+              "name": "Docker",
+              "icon": "docker"
+            },
+            {
+              "name": "Bash",
+              "icon": "gnubash"
+            }
+          ]
+        },
+        {
+          "id": "backend",
+          "name": "Backend",
+          "url": "https://github.com/IMGIITRoorkee/omniport-frontend/",
+          "urlLabel": "GitHub repo for Omniport backend",
+          "technologies": [
+            {
+              "name": "Python",
+              "icon": "python"
+            },
+            {
+              "name": "django",
+              "icon": "django"
+            }
+          ]
+        },
+        {
+          "id": "documentation",
+          "name": "Documentation",
+          "url": "https://omniport.readthedocs.io/",
+          "urlLabel": "Developer documentation for Omniport",
+          "technologies": [
+            {
+              "name": "reST (Sphinx)",
+              "icon": "readthedocs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "portfolio",
+      "name": "Portfolio",
+      "children": [
+        {
+          "id": "website",
+          "name": "Website",
+          "url": "https://github.com/dhruvkb/portfolio/",
+          "urlLabel": "GitHub repo for this website",
+          "technologies": [
+            {
+              "name": "TypeScript",
+              "icon": "typescript"
+            },
+            {
+              "name": "Vue",
+              "icon": "vuedotjs"
+            },
+            {
+              "name": "Tailwind",
+              "icon": "tailwindcss"
+            }
+          ]
+        },
+        {
+          "id": "resume",
+          "name": "Résumé",
+          "url": "https://github.com/dhruvkb/resume/",
+          "urlLabel": "GitHub repo for my résumé LaTeX",
+          "technologies": [
+            {
+              "name": "LaTeX",
+              "icon": "latex"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
