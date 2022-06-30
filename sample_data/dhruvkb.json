@@ -222,6 +222,29 @@
   ],
   "projects": [
     {
+      "id": "reschume",
+      "name": "Réschumé",
+      "children": [
+        {
+          "id": "schema",
+          "name": "Résumé schema",
+          "url": "https://dhruvkb.github.io/reschume",
+          "role": "Creator",
+          "urlLabel": "User documentation for Réschumé",
+          "technologies": [
+            {
+              "name": "Node.js",
+              "icon": "nodedotjs"
+            },
+            {
+              "name": "JSON",
+              "icon": "json"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "pls",
       "name": "pls",
       "children": [
@@ -426,6 +449,10 @@
             {
               "name": "LaTeX",
               "icon": "latex"
+            },
+            {
+              "name": "Réschumé",
+              "icon": "reschume"
             }
           ]
         }
