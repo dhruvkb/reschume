@@ -6,25 +6,9 @@
   "description": "Contains definitions for data types shared by many schema files.",
 
   "$defs": {
-    "period": {
-      "title": "Period",
-      "description": "Represents the time period between a start and end date. For active periods, the end date can be omitted.",
-
-      "type": "object",
-      "properties": {
-        "start": { "$ref": "#/$defs/date" },
-        "end": { "$ref": "#/$defs/date" }
-      },
-      "required": ["start"],
-
-      "examples": [
-        { "start": [2020, 12], "end": [2021, 1, 1] },
-        { "start": [2019] }
-      ]
-    },
     "date": {
       "title": "Date",
-      "description": "Represents a date as an array consisting of year, month and date respectively. Only the year is required.",
+      "description": "an array consisting of year, month and date respectively; Only the year is required.",
 
       "type": "array",
       "prefixItems": [
@@ -37,42 +21,88 @@
 
       "examples": [[2021, 1, 1], [2020, 12], [2019]]
     },
+    "period": {
+      "title": "Period",
+      "description": "a period of time between a start and end date; For active periods, the end date can be omitted.",
+
+      "type": "object",
+      "properties": {
+        "start": {
+          "description": "the start date of the period",
+          "$ref": "#/$defs/date"
+        },
+        "end": {
+          "description": "the end date of the period; If omitted, the period is considered active in the present.",
+          "$ref": "#/$defs/date"
+        }
+      },
+      "required": ["start"],
+
+      "examples": [
+        { "start": [2020, 12], "end": [2021, 1, 1] },
+        { "start": [2019] }
+      ]
+    },
+    "coordinates": {
+      "title": "Coordinates",
+      "description": "a pair of two numbers that uniquely identify a point on the globe",
+
+      "type": "object",
+      "properties": {
+        "latitude": {
+          "description": "a measure of distance North (positive) or South (negative) of the Equator (zero degrees)",
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "longitude": {
+          "description": "a measure of distance East (positive) or West (negative) of the Prime Meridian (zero degrees)",
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        }
+      },
+      "required": ["latitude", "longitude"]
+    },
     "address": {
       "title": "Address",
-      "description": "Represents a physical location for an entity such as an organisation or educational institute.",
+      "description": "a physical location for an entity such as an organisation or educational institute",
 
       "oneOf": [
         {
           "type": "object",
           "properties": {
             "addressLines": {
+              "description": "the human-readable representation of the address in multiple lines of text",
               "type": "array",
               "items": { "type": "string" },
               "minItems": 1
             },
-            "postBox": { "type": "number" },
 
-            "city": { "type": "string" },
-            "state": { "type": "string" },
-            "countryCode": { "type": "string", "pattern": "^[A-Z]{2}$" },
-            "postCode": { "type": "integer" },
+            "city": {
+              "description": "the name of the city, town or village",
+              "type": "string"
+            },
+            "state": {
+              "description": "the name of the state or province",
+              "type": "string"
+            },
+            "countryCode": {
+              "description": "the two letter country code as per ISO 3166-1 alpha-2",
+              "type": "string",
+              "pattern": "^[A-Z]{2}$"
+            },
 
-            "coordinates": {
-              "type": "object",
-              "properties": {
-                "latitude": {
-                  "type": "number",
-                  "minimum": -90,
-                  "maximum": 90
-                },
-                "longitude": {
-                  "type": "number",
-                  "minimum": -180,
-                  "maximum": 180
-                }
-              },
-              "required": ["latitude", "longitude"]
-            }
+            "postBox": {
+              "description": "the Post Office box number that can be used to deposit mail",
+              "type": "number"
+            },
+            "postCode": {
+              "description": "the code assigned to the location by the postal system, like a ZIP or PIN code",
+              "oneOf": [{ "type": "string" }, { "type": "integer" }]
+            },
+
+            "coordinates": { "$ref": "#/$defs/coordinates" }
           }
         },
         { "type": "string" }
