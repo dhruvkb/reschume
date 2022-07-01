@@ -126,6 +126,28 @@
           }
         }
       ]
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "a collection of emails and phone numbers to contact an entity",
+
+      "type": "object",
+      "properties": {
+        "emails": {
+          "description": "email addresses",
+          "type": "array",
+          "items": { "type": "string", "format": "email" }
+        },
+        "phones": {
+          "description": "phone numbers",
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+
+      "examples": [
+        { "emails": ["user@example.com"], "phones": ["+91 9988776655"] }
+      ]
     }
   }
 }
