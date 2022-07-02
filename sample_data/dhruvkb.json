@@ -239,12 +239,12 @@
           "urlLabel": "User documentation for Réschumé",
           "technologies": [
             {
-              "name": "Node.js",
-              "icon": "nodedotjs"
+              "id": "nodedotjs",
+              "name": "Node.js"
             },
             {
-              "name": "JSON",
-              "icon": "json"
+              "id": "json",
+              "name": "JSON"
             }
           ]
         }
@@ -262,8 +262,8 @@
           "urlLabel": "PyPI package for pls",
           "technologies": [
             {
-              "name": "Python",
-              "icon": "python"
+              "id": "python",
+              "name": "Python"
             }
           ]
         },
@@ -275,12 +275,12 @@
           "urlLabel": "User documentation for pls",
           "technologies": [
             {
-              "name": "Markdown",
-              "icon": "markdown"
+              "id": "markdown",
+              "name": "Markdown"
             },
             {
-              "name": "Vue",
-              "icon": "vuedotjs"
+              "id": "vuedotjs",
+              "name": "Vue"
             }
           ]
         }
@@ -297,16 +297,16 @@
           "urlLabel": "GitHub repo for Openverse frontend",
           "technologies": [
             {
-              "name": "JavaScript",
-              "icon": "javascript"
+              "id": "javascript",
+              "name": "JavaScript"
             },
             {
-              "name": "Nuxt",
-              "icon": "nuxtdotjs"
+              "id": "nuxtdotjs",
+              "name": "Nuxt"
             },
             {
-              "name": "Tailwind",
-              "icon": "tailwindcss"
+              "id": "tailwindcss",
+              "name": "Tailwind"
             }
           ]
         },
@@ -317,12 +317,12 @@
           "urlLabel": "GitHub repo for Openverse API",
           "technologies": [
             {
-              "name": "Python",
-              "icon": "python"
+              "id": "python",
+              "name": "Python"
             },
             {
-              "name": "Django",
-              "icon": "django"
+              "id": "django",
+              "name": "Django"
             }
           ]
         }
@@ -339,12 +339,12 @@
           "urlLabel": "Developer documentation for see·el·aye",
           "technologies": [
             {
-              "name": "TypeScript",
-              "icon": "typescript"
+              "id": "typescript",
+              "name": "TypeScript"
             },
             {
-              "name": "Vue",
-              "icon": "vuedotjs"
+              "id": "vuedotjs",
+              "name": "Vue"
             }
           ]
         }
@@ -361,12 +361,12 @@
           "urlLabel": "GitHub repo for Vocabulary",
           "technologies": [
             {
-              "name": "JavaScript",
-              "icon": "javascript"
+              "id": "javascript",
+              "name": "JavaScript"
             },
             {
-              "name": "Vue",
-              "icon": "vuedotjs"
+              "id": "vuedotjs",
+              "name": "Vue"
             }
           ]
         }
@@ -383,12 +383,12 @@
           "urlLabel": "GitHub repo for Omniport infrastructure",
           "technologies": [
             {
-              "name": "Docker",
-              "icon": "docker"
+              "id": "docker",
+              "name": "Docker"
             },
             {
-              "name": "Bash",
-              "icon": "gnubash"
+              "id": "gnubash",
+              "name": "Bash"
             }
           ]
         },
@@ -399,12 +399,12 @@
           "urlLabel": "GitHub repo for Omniport backend",
           "technologies": [
             {
-              "name": "Python",
-              "icon": "python"
+              "id": "python",
+              "name": "Python"
             },
             {
-              "name": "django",
-              "icon": "django"
+              "id": "django",
+              "name": "django"
             }
           ]
         },
@@ -415,8 +415,8 @@
           "urlLabel": "Developer documentation for Omniport",
           "technologies": [
             {
-              "name": "reST (Sphinx)",
-              "icon": "readthedocs"
+              "id": "readthedocs",
+              "name": "reST (Sphinx)"
             }
           ]
         }
@@ -433,16 +433,16 @@
           "urlLabel": "GitHub repo for this website",
           "technologies": [
             {
-              "name": "TypeScript",
-              "icon": "typescript"
+              "id": "typescript",
+              "name": "TypeScript"
             },
             {
-              "name": "Vue",
-              "icon": "vuedotjs"
+              "id": "vuedotjs",
+              "name": "Vue"
             },
             {
-              "name": "Tailwind",
-              "icon": "tailwindcss"
+              "id": "tailwindcss",
+              "name": "Tailwind"
             }
           ]
         },
@@ -453,12 +453,12 @@
           "urlLabel": "GitHub repo for my résumé LaTeX",
           "technologies": [
             {
-              "name": "LaTeX",
-              "icon": "latex"
+              "id": "latex",
+              "name": "LaTeX"
             },
             {
-              "name": "Réschumé",
-              "icon": "reschume"
+              "id": "reschume",
+              "name": "Réschumé"
             }
           ]
         }
