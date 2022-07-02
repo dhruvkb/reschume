@@ -1,8 +1,7 @@
 {
   "name": "reschume",
   "description": "A comprehensive schema for documenting résumés.",
-  "version": "1.0.0",
-  "private": true,
+  "version": "0.0.0-alpha.0",
   "author": {
     "name": "Dhruv Bhanushali",
     "url": "https://dhruvkb.dev"
@@ -11,6 +10,12 @@
   "homepage": "https://dhruvkb.github.io/reschume",
   "repository": "github:dhruvkb/reschume",
   "bugs": "https://github.com/dhruvkb/reschume/issues",
+  "keywords": [
+    "portfolio",
+    "resume",
+    "json-schema",
+    "typescript"
+  ],
   "scripts": {
     "prepare": "husky install",
     "lint": "prettier --check .",
