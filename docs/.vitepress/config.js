@@ -15,6 +15,7 @@ export default {
     logo: "/logo.svg", // automatically uses `base`
     nav: [
       { text: "Schemas", link: "/schemas" },
+      { text: "npm ↗", link: "https://www.npmjs.com/package/reschume" },
       { text: "GitHub ↗", link: "https://github.com/dhruvkb/reschume" },
     ],
     footer: {
