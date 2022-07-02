@@ -25,6 +25,7 @@ if (isValid) {
   console.group();
   console.error(validate.errors);
   console.groupEnd();
+  failures += 1;
 }
 
 const passed = chalk.green(`PASS: ${successes}`);
