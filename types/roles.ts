@@ -8,11 +8,11 @@ const roleTypes = [
   "contractor",
 ] as const;
 
-type RoleType = typeof roleTypes[number];
+export type RoleType = typeof roleTypes[number];
 
 const roleLocations = ["in-office", "hybrid", "remote"] as const;
 
-type RoleLocation = typeof roleLocations[number];
+export type RoleLocation = typeof roleLocations[number];
 
 /**
  * a job performed at an organisation

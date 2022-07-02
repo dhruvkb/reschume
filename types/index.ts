@@ -7,7 +7,7 @@ export { Date, Period, Coordinates, Address, Contact } from "./base";
 export { Profile, Bio } from "./bio";
 export { Certification, Institute } from "./education";
 export { Technology, Project, Epic } from "./projects";
-export { Role, Org } from "./roles";
+export { RoleType, RoleLocation, Role, Org } from "./roles";
 
 export interface Resume {
   bio: Bio;
