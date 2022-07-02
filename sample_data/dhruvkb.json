@@ -443,6 +443,10 @@
             {
               "id": "tailwindcss",
               "name": "Tailwind"
+            },
+            {
+              "id": "reschume",
+              "name": "Réschumé"
             }
           ]
         },
