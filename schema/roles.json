@@ -11,17 +11,35 @@
   "$defs": {
     "org": {
       "title": "Org",
-      "description": "Represents an organisation that offers multiple roles.",
+      "description": "an organisation that employs people in multiple roles",
 
       "type": "object",
       "properties": {
-        "id": { "type": "string" },
-        "name": { "type": "string" },
-        "shortName": { "type": "string" },
-        "url": { "type": "string", "format": "uri" },
-        "address": { "$ref": "base.json#/$defs/address" },
+        "id": {
+          "description": "an identifier for the organisation; A Simple Icons slug might be preferable.",
+          "type": "string"
+        },
+        "name": {
+          "description": "the full name of the organisation",
+          "type": "string"
+        },
+        "shortName": {
+          "description": "an abbreviated name for the organisation, such as UN for United Nations",
+          "type": "string"
+        },
+
+        "url": {
+          "description": "the public-facing URL to access the organisation",
+          "type": "string",
+          "format": "uri"
+        },
+        "address": {
+          "description": "the physical location of the organisation workplace",
+          "$ref": "base.json#/$defs/address"
+        },
 
         "children": {
+          "description": "an array of roles held at the organisation",
           "type": "array",
           "items": { "$ref": "#/$defs/role" }
         }
@@ -51,18 +69,29 @@
     },
     "role": {
       "title": "Role",
-      "description": "Represents a job performed at an organisation.",
+      "description": "a job performed at an organisation",
 
       "type": "object",
       "properties": {
-        "id": { "type": "string" },
-        "name": { "type": "string" },
-        "summary": { "type": "string" },
+        "id": {
+          "description": "an identifier for the role",
+          "type": "string"
+        },
+        "name": {
+          "description": "the job title of the role",
+          "type": "string"
+        },
+        "summary": {
+          "description": "a short description and introduction of the role",
+          "type": "string"
+        },
         "highlights": {
+          "description": "a collection of responsibilities of and accomplishments under the role, as bullet points",
           "type": "array",
           "items": { "type": "string" }
         },
         "type": {
+          "description": "the nature of the role in terms of legal obligations",
           "enum": [
             "foss-contributor",
             "part-timer",
@@ -72,9 +101,13 @@
           ]
         },
         "location": {
+          "description": "the nature of the role in terms of workplace",
           "enum": ["in-office", "hybrid", "remote"]
         },
-        "period": { "$ref": "base.json#/$defs/period" }
+        "period": {
+          "description": "the time duration for which the role was held",
+          "$ref": "base.json#/$defs/period"
+        }
       },
       "required": ["id", "name"],
 

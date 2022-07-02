@@ -11,15 +11,27 @@
   "$defs": {
     "epic": {
       "title": "Epic",
-      "description": "Represents an endeavour that encompasses multiple projects.",
+      "description": "a large undertaking that encompasses multiple projects",
 
       "type": "object",
       "properties": {
-        "id": { "type": "string" },
-        "name": { "type": "string" },
-        "url": { "type": "string", "format": "uri" },
+        "id": {
+          "description": "an identifier for the epic; A Simple Icons slug might be preferable.",
+          "type": "string"
+        },
+        "name": {
+          "description": "the name of the epic",
+          "type": "string"
+        },
+
+        "url": {
+          "description": "the public-facing URL to access the epic",
+          "type": "string",
+          "format": "uri"
+        },
 
         "children": {
+          "description": "an array of the epic's constitutent projects",
           "type": "array",
           "items": { "$ref": "#/$defs/project" }
         }
@@ -41,24 +53,48 @@
     },
     "project": {
       "title": "Project",
-      "description": "Represents a project that forms a part of a larger epic.",
+      "description": "an endeavour that forms a part of a larger epic",
 
       "type": "object",
       "properties": {
-        "id": { "type": "string" },
-        "name": { "type": "string" },
-        "summary": { "type": "string" },
-        "role": { "type": "string" },
+        "id": {
+          "description": "an identifier for the project",
+          "type": "string"
+        },
+        "name": {
+          "description": "the name of the project",
+          "type": "string"
+        },
+        "url": {
+          "description": "the public-facing URL to access the project",
+          "type": "string",
+          "format": "uri"
+        },
+
+        "summary": {
+          "description": "a short description and introduction of the project",
+          "type": "string"
+        },
         "highlights": {
+          "description": "a collection of salient features of the projects, as bullet points",
           "type": "array",
           "items": { "type": "string" }
         },
-        "url": { "type": "string", "format": "uri" },
+
+        "role": {
+          "description": "the part played by the person in the development of the project",
+          "type": "string"
+        },
+
         "technologies": {
+          "description": "the languages, tools or frameworks used in the developement of the project",
           "type": "array",
           "items": { "$ref": "#/$defs/technology" }
         },
-        "period": { "$ref": "base.json#/$defs/period" }
+        "period": {
+          "description": "the time duration during which the project was created and maintained",
+          "$ref": "base.json#/$defs/period"
+        }
       },
       "required": ["id", "name"],
 
@@ -70,8 +106,8 @@
           "highlights": ["", "", ""],
           "url": "https://dhruvkb.github.io/reschume/",
           "technologies": [
-            { "name": "JSON", "icon": "json" },
-            { "name": "TypeScript", "icon": "typescript" }
+            { "id": "json", "name": "JSON" },
+            { "id": "typescript", "name": "TypeScript" }
           ],
           "period": {
             "start": [2022, 6]
@@ -82,18 +118,24 @@
 
     "technology": {
       "title": "Technology",
-      "description": "Represents a language or framework used in a project.",
+      "description": "a language, tool or framework used in the development of a project",
 
       "type": "object",
       "properties": {
-        "name": { "type": "string" },
-        "icon": { "type": "string" }
+        "id": {
+          "description": "an identifier for the technology; A Simple Icons slug might be preferable.",
+          "type": "string"
+        },
+        "name": {
+          "description": "the proper name of the technology",
+          "type": "string"
+        }
       },
-      "required": ["name"],
+      "required": ["id", "name"],
 
       "examples": [
-        { "name": "JavaScript", "icon": "javascript" },
-        { "name": "JSON" }
+        { "id": "json", "name": "JSON" },
+        { "id": "typescript", "name": "TypeScript" }
       ]
     }
   }

@@ -9,19 +9,89 @@
   "items": { "$ref": "#/$defs/institute" },
 
   "$defs": {
-    "institute": {
-      "title": "Institute",
-      "description": "Represents an educational institution such as a school or college.",
+    "certification": {
+      "title": "Certification",
+      "description": "a document that proves successful completion of a course",
 
       "type": "object",
       "properties": {
-        "id": { "type": "string" },
-        "name": { "type": "string" },
-        "shortName": { "type": "string" },
-        "url": { "type": "string", "format": "uri" },
-        "address": { "$ref": "base.json#/$defs/address" },
+        "id": {
+          "description": "an identifier for the certification",
+          "type": "string"
+        },
+        "name": {
+          "description": "the name of the certification",
+          "type": "string"
+        },
+        "field": {
+          "description": "the subject of study",
+          "type": "string"
+        },
+        "period": {
+          "description": "the duration of study for the certification",
+          "$ref": "base.json#/$defs/period"
+        },
+        "score": {
+          "description": "the score achieved in the certification",
+          "type": "string"
+        },
+        "maxScore": {
+          "description": "the maximum attainable score",
+          "type": "string"
+        },
+        "courses": {
+          "description": "a list of courses completed to obtain the certification",
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["id", "name", "field"],
+
+      "examples": [
+        {
+          "id": "b_tech",
+          "name": "B. Tech.",
+          "field": "Engineering Physics",
+          "score": "7.2",
+          "maxScore": "10",
+          "courses": ["PHN101 - Introduction to Engineering Physics"],
+          "period": {
+            "start": [2015],
+            "end": [2019]
+          }
+        }
+      ]
+    },
+    "institute": {
+      "title": "Institute",
+      "description": "an educational institution such as a school or college offering various certifications",
+
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "an identifier for the institute",
+          "type": "string"
+        },
+        "name": {
+          "description": "the full name of the institute",
+          "type": "string"
+        },
+        "shortName": {
+          "description": "an abbreviated name for the insitute, such as IIT for Indian Institute of Technology",
+          "type": "string"
+        },
+        "url": {
+          "description": "the public-facing URL to access the institute",
+          "type": "string",
+          "format": "uri"
+        },
+        "address": {
+          "description": "the physical location of the institute campus",
+          "$ref": "base.json#/$defs/address"
+        },
 
         "children": {
+          "description": "an array of certifications obtained from the institute",
           "type": "array",
           "items": { "$ref": "#/$defs/certification" }
         }
@@ -46,40 +116,6 @@
               "field": "Engineering Physics"
             }
           ]
-        }
-      ]
-    },
-    "certification": {
-      "title": "Certification",
-      "description": "Represents a certification that proves successful completion of a course.",
-
-      "type": "object",
-      "properties": {
-        "id": { "type": "string" },
-        "name": { "type": "string" },
-        "field": { "type": "string" },
-        "period": { "$ref": "base.json#/$defs/period" },
-        "score": { "type": "string" },
-        "maxScore": { "type": "string" },
-        "courses": {
-          "type": "array",
-          "items": { "type": "string" }
-        }
-      },
-      "required": ["id", "name", "field"],
-
-      "examples": [
-        {
-          "id": "b_tech",
-          "name": "B. Tech.",
-          "field": "Engineering Physics",
-          "score": "7.2",
-          "maxScore": "10",
-          "courses": ["PHN101 - Introduction to Engineering Physics"],
-          "period": {
-            "start": [2015],
-            "end": [2019]
-          }
         }
       ]
     }
