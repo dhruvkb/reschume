@@ -8,10 +8,5 @@
   --vp-c-brand-darker: #0369a1;
 
   /* Home heading gradient */
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(
-    0deg,
-    #14b8a6,
-    #0ea5e9
-  );
+  --vp-home-hero-name-color: #06b6d4;
 }
