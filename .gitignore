@@ -26,3 +26,7 @@ yarn-error.log*
 
 # Output files
 dist/
+lib/
+
+# Packaged library
+reschume*.tgz

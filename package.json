@@ -18,30 +18,46 @@
   ],
   "scripts": {
     "prepare": "husky install",
-    "lint": "prettier --check .",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.mjs,.ts .",
+    "lint:fix": "npm run lint -- --fix",
+    "format:check": "prettier --check .",
     "format": "prettier --write .",
+    "types": "tsc --noEmit",
+    "checks": "npm run types && npm run format",
     "validate:eg": "node scripts/validate_eg.mjs",
     "validate:sample": "node scripts/validate_sample.mjs",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:serve": "vitepress serve docs",
+    "prebuild": "rm -rf lib/ && npm run checks",
+    "build": "tsc"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.30.3",
+    "@typescript-eslint/parser": "^5.30.3",
     "ajv": "^8.11.0",
     "ajv-formats": "^2.1.1",
     "axios": "^0.27.2",
     "chalk": "^5.0.1",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
+    "typescript": "^4.7.4",
     "vitepress": "^1.0.0-alpha.4",
     "vue": "^3.2.37"
   },
   "lint-staged": {
-    "*.{json,js,mjs,css,md,vue}": "prettier --write"
+    "*.{css,js,json,md,mjs,ts,vue}": "prettier --write"
   },
   "imports": {
     "#schema/*": "./schema/*",
     "#sample_data/*": "./sample_data/*"
-  }
+  },
+  "files": [
+    "/lib",
+    "README.md"
+  ],
+  "types": "lib/index.d.ts"
 }
