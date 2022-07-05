@@ -49,10 +49,11 @@
     "vue": "^3.2.37"
   },
   "lint-staged": {
-    "*.{css,js,json,md,mjs,ts,vue}": [
+    "*.{css,js,json,mjs,ts,vue}": [
       "eslint --fix",
       "prettier --write"
-    ]
+    ],
+    "*.{md}": "prettier --write"
   },
   "imports": {
     "#schema/*": "./schema/*",
