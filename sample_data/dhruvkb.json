@@ -287,6 +287,33 @@
       ]
     },
     {
+      "id": "2fac",
+      "name": "2Fac",
+      "children": [
+        {
+          "id": "app",
+          "name": "TOTP generator",
+          "url": "https://2fac.vercel.app",
+          "role": "Creator",
+          "urlLabel": "2Fac web-application",
+          "technologies": [
+            {
+              "id": "typescript",
+              "name": "TypeScript"
+            },
+            {
+              "id": "ionic",
+              "name": "Ionic"
+            },
+            {
+              "id": "vuedotjs",
+              "name": "Vue"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "openverse",
       "name": "Openverse",
       "children": [
