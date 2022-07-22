@@ -6,7 +6,7 @@
   "properties": {
     "bio": { "$ref": "bio.json" },
     "education": { "$ref": "education.json" },
-    "projects": { "$ref": "projects.json" },
-    "roles": { "$ref": "roles.json" }
+    "creations": { "$ref": "creations.json" },
+    "work": { "$ref": "work.json" }
   }
 }

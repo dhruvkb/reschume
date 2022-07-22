@@ -38,7 +38,7 @@
           "$ref": "base.json#/$defs/address"
         },
 
-        "children": {
+        "roles": {
           "description": "an array of roles held at the organisation",
           "type": "array",
           "items": { "$ref": "#/$defs/role" }

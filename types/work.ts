@@ -72,7 +72,7 @@ export type Org = {
   /**
    * an array of roles held at the organisation
    */
-  children: Role[];
+  roles: Role[];
 } & Partial<{
   /**
    * an abbreviated name for the organisation, such as UN for United Nations

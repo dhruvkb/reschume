@@ -52,7 +52,7 @@ export type Institute = {
   /**
    * an array of certifications obtained from the institute
    */
-  children: Certification[];
+  certifications: Certification[];
 } & Partial<{
   /**
    * an abbreviated name for the insitute, such as IIT for Indian Institute of Technology

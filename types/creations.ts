@@ -83,5 +83,5 @@ export interface Epic {
   /**
    * an array of the epic's constitutent projects
    */
-  children: Project[];
+  projects: Project[];
 }

@@ -90,7 +90,7 @@
           "$ref": "base.json#/$defs/address"
         },
 
-        "children": {
+        "certifications": {
           "description": "an array of certifications obtained from the institute",
           "type": "array",
           "items": { "$ref": "#/$defs/certification" }

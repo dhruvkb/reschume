@@ -30,7 +30,7 @@
           "format": "uri"
         },
 
-        "children": {
+        "projects": {
           "description": "an array of the epic's constitutent projects",
           "type": "array",
           "items": { "$ref": "#/$defs/project" }
