@@ -60,7 +60,7 @@
             "postCode": 94042
           },
 
-          "children": [
+          "roles": [
             { "id": "project_maintainer", "name": "Project maintainer" },
             { "id": "gsoc_engineer", "name": "GSoC engineer" }
           ]

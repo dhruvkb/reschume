@@ -43,7 +43,7 @@
           "id": "portfolio",
           "name": "Portfolio",
           "url": "https://dhruvkb.dev",
-          "children": [
+          "projects": [
             { "id": "website", "name": "Website" },
             { "id": "resume", "name": "Resume" },
             { "id": "reschume", "name": "Réschumé" }

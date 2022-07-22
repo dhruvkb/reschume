@@ -45,7 +45,7 @@
         "state": "Haridwar",
         "countryCode": "IN"
       },
-      "children": [
+      "certifications": [
         {
           "id": "b_tech",
           "name": "B. Tech.",
@@ -60,12 +60,12 @@
       ]
     }
   ],
-  "roles": [
+  "work": [
     {
       "id": "automattic",
       "name": "Automattic",
       "url": "https://automattic.com",
-      "children": [
+      "roles": [
         {
           "id": "code_wrangler",
           "name": "Code wrangler",
@@ -84,7 +84,7 @@
       "name": "WordPress",
       "shortName": "WP",
       "url": "https://wordpress.org/openverse/",
-      "children": [
+      "roles": [
         {
           "id": "project_maintainer",
           "name": "Project maintainer",
@@ -101,7 +101,7 @@
       "name": "Center of CI",
       "shortName": "CCI",
       "url": "https://centerofci.org",
-      "children": [
+      "roles": [
         {
           "id": "software_engineer",
           "name": "Software engineer",
@@ -116,7 +116,7 @@
       "id": "browserstack",
       "name": "BrowserStack",
       "url": "https://browserstack.com",
-      "children": [
+      "roles": [
         {
           "id": "software_engineer",
           "name": "Software engineer",
@@ -133,7 +133,7 @@
       "name": "Creative Commons",
       "shortName": "CC",
       "url": "https://opensource.creativecommons.org",
-      "children": [
+      "roles": [
         {
           "id": "project_maintainer",
           "name": "Project maintainer",
@@ -177,7 +177,7 @@
       "name": "IMG, IIT Roorkee",
       "shortName": "IMG IIT-R",
       "url": "https://img.channeli.in",
-      "children": [
+      "roles": [
         {
           "id": "chief_coordinator_tech",
           "name": "Chief coordinator (tech)",
@@ -194,7 +194,7 @@
       "id": "fampay",
       "name": "FamPay",
       "url": "https://fampay.in",
-      "children": [
+      "roles": [
         {
           "id": "software_engineer",
           "name": "Software engineer",
@@ -210,7 +210,7 @@
       "id": "hackerearth",
       "name": "HackerEarth",
       "url": "https://hackerearth.com",
-      "children": [
+      "roles": [
         {
           "id": "infrastructure_engineer",
           "name": "Infrastructure engineer",
@@ -232,11 +232,11 @@
       ]
     }
   ],
-  "projects": [
+  "creations": [
     {
       "id": "reschume",
       "name": "Réschumé",
-      "children": [
+      "projects": [
         {
           "id": "schema",
           "name": "Résumé schema",
@@ -259,7 +259,7 @@
     {
       "id": "pls",
       "name": "pls",
-      "children": [
+      "projects": [
         {
           "id": "app",
           "name": "CLI application",
@@ -295,7 +295,7 @@
     {
       "id": "2fac",
       "name": "2Fac",
-      "children": [
+      "projects": [
         {
           "id": "app",
           "name": "TOTP generator",
@@ -322,7 +322,7 @@
     {
       "id": "openverse",
       "name": "Openverse",
-      "children": [
+      "projects": [
         {
           "id": "frontend",
           "name": "Search engine",
@@ -364,7 +364,7 @@
     {
       "id": "seeelaye",
       "name": "see·el·aye",
-      "children": [
+      "projects": [
         {
           "id": "seeelaye",
           "name": "CLI emulator",
@@ -386,7 +386,7 @@
     {
       "id": "vocabulary",
       "name": "Vocabulary",
-      "children": [
+      "projects": [
         {
           "id": "vocabulary",
           "name": "UI components",
@@ -408,7 +408,7 @@
     {
       "id": "omniport",
       "name": "Omniport",
-      "children": [
+      "projects": [
         {
           "id": "infrastructure",
           "name": "Infrastructure",
@@ -458,7 +458,7 @@
     {
       "id": "portfolio",
       "name": "Portfolio",
-      "children": [
+      "projects": [
         {
           "id": "website",
           "name": "Website",
