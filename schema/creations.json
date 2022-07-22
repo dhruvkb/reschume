@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://dhruvkb.github.io/reschume/schema/projects.json",
+  "$id": "https://dhruvkb.github.io/reschume/schema/creations.json",
 
   "title": "Projects",
   "description": "Represents a collection of epics and projects that were a part of said epics.",
