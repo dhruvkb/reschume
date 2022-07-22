@@ -6,8 +6,8 @@ import { crunchText } from "./utils.mjs";
 import baseSchema from "#schema/base.json" assert { type: "json" };
 import bioSchema from "#schema/bio.json" assert { type: "json" };
 import educationSchema from "#schema/education.json" assert { type: "json" };
-import projectsSchema from "#schema/projects.json" assert { type: "json" };
-import rolesSchema from "#schema/roles.json" assert { type: "json" };
+import creationsSchema from "#schema/creations.json" assert { type: "json" };
+import workSchema from "#schema/work.json" assert { type: "json" };
 
 /**
  * Validate the examples defined inside the given schema.
@@ -58,8 +58,8 @@ const validateExamples = (schema, schemaRef, color) => {
 const schemas = {
   base: baseSchema,
   bio: bioSchema,
-  roles: rolesSchema,
-  projects: projectsSchema,
+  work: workSchema,
+  creations: creationsSchema,
   education: educationSchema,
 };
 
