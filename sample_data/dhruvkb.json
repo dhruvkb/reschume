@@ -75,7 +75,7 @@
             "start": [2021, 4]
           },
           "type": "full-timer",
-          "epicSlugs": ["openverse"]
+          "epicIds": ["openverse"]
         }
       ]
     },
@@ -92,7 +92,7 @@
             "start": [2021, 4]
           },
           "type": "foss-contributor",
-          "epicSlugs": ["openverse"]
+          "epicIds": ["openverse"]
         }
       ]
     },
@@ -141,7 +141,7 @@
             "start": [2019, 9]
           },
           "type": "foss-contributor",
-          "epicSlugs": ["vocabulary"]
+          "epicIds": ["vocabulary"]
         },
         {
           "id": "foss_community_coordinator",
@@ -186,7 +186,7 @@
             "end": [2019, 4]
           },
           "type": "part-timer",
-          "epicSlugs": ["omniport"]
+          "epicIds": ["omniport"]
         }
       ]
     },
