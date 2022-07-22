@@ -6,8 +6,8 @@ import addFormats from "ajv-formats";
 
 import baseSchema from "#schema/base.json" assert { type: "json" };
 import bioSchema from "#schema/bio.json" assert { type: "json" };
-import rolesSchema from "#schema/roles.json" assert { type: "json" };
-import projectsSchema from "#schema/projects.json" assert { type: "json" };
+import workSchema from "#schema/work.json" assert { type: "json" };
+import creationsSchema from "#schema/creations.json" assert { type: "json" };
 import educationSchema from "#schema/education.json" assert { type: "json" };
 
 /**
@@ -45,8 +45,8 @@ export const getAjv = (useNetwork = false) => {
   if (!useNetwork) {
     ajv.addSchema(baseSchema);
     ajv.addSchema(bioSchema);
-    ajv.addSchema(rolesSchema);
-    ajv.addSchema(projectsSchema);
+    ajv.addSchema(workSchema);
+    ajv.addSchema(creationsSchema);
     ajv.addSchema(educationSchema);
   }
 
