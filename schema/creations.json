@@ -24,6 +24,11 @@
           "type": "string"
         },
 
+        "summary": {
+          "description": "a short description and introduction of the epic",
+          "type": "string"
+        },
+
         "url": {
           "description": "the public-facing URL to access the epic",
           "type": "string",
@@ -43,6 +48,7 @@
           "id": "portfolio",
           "name": "Portfolio",
           "url": "https://dhruvkb.dev",
+          "summary": "My portfolio is my small personal slice of the Internet.",
           "projects": [
             { "id": "website", "name": "Website" },
             { "id": "resume", "name": "Resume" },

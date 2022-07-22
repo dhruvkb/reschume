@@ -79,6 +79,10 @@ export interface Epic {
    * the public-facing URL to access the epic
    */
   url?: string;
+  /**
+   * a short description and introduction of the epic
+   */
+  summary?: string;
 
   /**
    * an array of the epic's constitutent projects
