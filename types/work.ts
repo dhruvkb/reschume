@@ -87,4 +87,8 @@ export type Org = {
    * the physical location of the organisation workplace
    */
   address: Address;
+  /**
+   * a short description and introduction of the organisation
+   */
+  summary: string;
 }>;

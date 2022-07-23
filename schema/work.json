@@ -28,6 +28,11 @@
           "type": "string"
         },
 
+        "summary": {
+          "description": "a short description and introduction of the organisation",
+          "type": "string"
+        },
+
         "url": {
           "description": "the public-facing URL to access the organisation",
           "type": "string",
@@ -51,6 +56,7 @@
           "id": "creative_commons",
           "name": "Creative Commons",
           "shortName": "CC",
+          "summary": "Creative Commons is a nonprofit organization that helps overcome legal obstacles to the sharing of knowledge and creativity to address the world’s pressing challenges.",
           "url": "https://creativecommons.org",
           "address": {
             "postBox": 1866,
@@ -81,6 +87,7 @@
           "description": "the job title of the role",
           "type": "string"
         },
+
         "summary": {
           "description": "a short description and introduction of the role",
           "type": "string"
