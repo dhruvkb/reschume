@@ -35,6 +35,22 @@ export type Profile = (
   name: string;
 };
 
+/**
+ * a keyword that is considered a useful talent in a profession
+ */
+export type Skill =
+  | string
+  | {
+      /**
+       * the name of the skill
+       */
+      name: string;
+      /**
+       * a collection of skills that are considered as components of this one
+       */
+      subskills?: Skill[];
+    };
+
 export type Bio = {
   /**
    * the name of the person
@@ -73,4 +89,9 @@ export type Bio = {
    * institute
    */
   address: Address;
+
+  /**
+   * a collection of keywords that are considered useful talents in a profession
+   */
+  skills: Skill[];
 }>;

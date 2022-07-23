@@ -32,7 +32,18 @@
       "city": "Navi Mumbai",
       "state": "Maharashtra",
       "countryCode": "IN"
-    }
+    },
+    "skills": [
+      { "name": "Java", "subskills": ["Swing", "JavaFX", "Android"] },
+      { "name": "Kotlin", "subskills": ["Android"] },
+      { "name": "Ruby", "subskills": ["Rails"] },
+      { "name": "Swift", "subskills": ["SwiftUI"] },
+      "Golang",
+      "Rust",
+      "C++",
+      "PHP",
+      "Bash"
+    ]
   },
   "education": [
     {
@@ -69,13 +80,17 @@
         {
           "id": "code_wrangler",
           "name": "Code wrangler",
-          "summary": "Worked as a full-stack engineer on the Openverse search-engine for openly-licensed media.",
-          "highlights": ["Contributed to everything!"],
           "period": {
             "start": [2021, 4]
           },
           "type": "full-timer",
-          "epicIds": ["openverse"]
+          "epicIds": ["openverse"],
+          "isFeatured": true,
+          "highlights": [
+            "Developed the <a href=\"https://wordpress.org/openverse\">Openverse</a> media search engine.",
+            "Worked on features with the WordPress FOSS community.",
+            "Onboarded & mentored new open source contributors."
+          ]
         }
       ]
     },
@@ -124,7 +139,15 @@
             "start": [2020, 2],
             "end": [2021, 3]
           },
-          "type": "full-timer"
+          "type": "full-timer",
+          "isFeatured": true,
+          "highlights": [
+            "Identified & fixed issues tantamount to a GDPR breach.",
+            "Built audit logs to prevent, detect & alert for breaches.",
+            "Integrated all email providers with the Central Email System.",
+            "Created system to track & visualise email engagement.",
+            "Set up systems to improve email deliverability & reputation."
+          ]
         }
       ]
     },
@@ -132,7 +155,7 @@
       "id": "creative_commons",
       "name": "Creative Commons",
       "shortName": "CC",
-      "url": "https://opensource.creativecommons.org",
+      "url": "https://creativecommons.org",
       "roles": [
         {
           "id": "project_maintainer",
@@ -150,7 +173,14 @@
             "start": [2020, 7],
             "end": [2020, 12]
           },
-          "type": "contractor"
+          "type": "contractor",
+          "isFeatured": true,
+          "highlights": [
+            "Identified, organised & triaged issues & reviewed PRs.",
+            "Onboarded & mentored new open source contributors.",
+            "Maintained the <a href=\"https://github.com/creativecommons/creativecommons.github.io-source/\">open-source site</a> and <a href=\"https://github.com/creativecommons/ccos-scripts/\">automation workflows</a>.",
+            "Increased reach & engagement of the <a href=\"https://twitter.com/cc_opensource\">official Twitter</a> handle."
+          ]
         },
         {
           "id": "foss_internship_mentor",
@@ -159,7 +189,15 @@
             "start": [2019, 12],
             "end": [2020, 12]
           },
-          "type": "foss-contributor"
+          "type": "foss-contributor",
+          "isFeatured": true,
+          "highlights": [
+            "Onboarded & guided applicants through the processes.",
+            "Reviewed, scored & ranked proposals from candidates.",
+            "Mentored <b>Google Season of Docs</b> 2020",
+            "Mentored <b>Outreachy</b> summer cohort 2020",
+            "Mentored <b>Outreachy</b> winter cohort 2019-20"
+          ]
         },
         {
           "id": "gsoc_engineer",
@@ -168,25 +206,12 @@
             "start": [2019, 5],
             "end": [2019, 8]
           },
-          "type": "intern"
-        }
-      ]
-    },
-    {
-      "id": "img",
-      "name": "IMG, IIT Roorkee",
-      "shortName": "IMG IIT-R",
-      "url": "https://img.channeli.in",
-      "roles": [
-        {
-          "id": "chief_coordinator_tech",
-          "name": "Chief coordinator (tech)",
-          "period": {
-            "start": [2016, 1],
-            "end": [2019, 4]
-          },
-          "type": "part-timer",
-          "epicIds": ["omniport"]
+          "type": "intern",
+          "isFeatured": true,
+          "highlights": [
+            "Conceived, designed & developed Vocabulary from scratch.",
+            "Initiated & supported Vocabulary integration with CC sites."
+          ]
         }
       ]
     },
@@ -202,7 +227,12 @@
             "start": [2019, 11],
             "end": [2019, 12]
           },
-          "type": "part-timer"
+          "type": "part-timer",
+          "isFeatured": true,
+          "highlights": [
+            "Developed the end-to-end payment flow for the application.",
+            "Integrated with Razorpay and Cashfree payment gateways."
+          ]
         }
       ]
     },
@@ -218,7 +248,15 @@
             "start": [2018, 5],
             "end": [2018, 7]
           },
-          "type": "intern"
+          "type": "intern",
+          "isFeatured": true,
+          "highlights": [
+            "Wrote the IaC for the entire production architecture.",
+            "Created tooling to deploy the IaC in an alternate AWS AZ.",
+            "Developed scripts to launch and terminate EC2 instances.",
+            "Isolated staging env from production in a separate VPC.",
+            "Enabled one‑click provisioning of staging environments."
+          ]
         },
         {
           "id": "software_engineer",
@@ -227,7 +265,45 @@
             "start": [2017, 5],
             "end": [2017, 7]
           },
-          "type": "intern"
+          "type": "intern",
+          "isFeatured": true,
+          "highlights": [
+            "Wrote a code‑evaluation engine to evaluate Java projects.",
+            "Created tooling to automatically build and execute projects.",
+            "Wrapped Ant in an async message‑based Python evaluator.",
+            "Developed the scaffolding architecture using RabbitMQ.",
+            "Added provider‑agnostic database connectivity using JDBC.",
+            "Installed security policies such as memory and I/O limits."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "img",
+      "name": "IMG, IIT Roorkee",
+      "shortName": "IMG IIT-R",
+      "summary": "Information Management Group (IMG) is the student body that developed, manages and upgrades both the CMS powering the IIT-R website and Omniport, the official intranet portal.",
+      "url": "https://img.channeli.in",
+      "roles": [
+        {
+          "id": "chief_coordinator_tech",
+          "name": "Chief coordinator (tech)",
+          "period": {
+            "start": [2016, 1],
+            "end": [2019, 4]
+          },
+          "type": "part-timer",
+          "epicIds": ["omniport"],
+          "highlights": [
+            "Pivoted IMG as a group from app to platform development.",
+            "Upgraded the legacy portal, tech stack & apps to <a href=\"https://omniport.readthedocs.io/\">Omniport</a>.",
+            "Containerised, decoupled & stabilised dev processes.",
+            "Halved timelines by revamping the development paradigm.",
+            "Mentored a team of over 50 developers and designers.",
+            "Fostered <a href=\"https://github.com/IMGIITRoorkee/\">OSS culture</a> by open-sourcing 40+ repos.",
+            "Led IMG to 10 and 13 GSoC selections in 2018 and 2019.",
+            "Reinvigorated IMG's popular image on various <a href=\"https://facebook.com/IMGIITRoorkee\">social media</a>."
+          ]
         }
       ]
     }
@@ -259,18 +335,24 @@
     {
       "id": "pls",
       "name": "pls",
+      "summary": "`pls` is a prettier and powerful `ls` for the pros. It has many additional features targeting tech-savvy users.",
       "projects": [
         {
           "id": "app",
           "name": "CLI application",
-          "url": "https://pypi.org/project/pls/",
+          "url": "https://github.com/dhruvkb/pls/",
+          "urlLabel": "GitHub repo for pls",
           "role": "Creator",
-          "urlLabel": "PyPI package for pls",
           "technologies": [
             {
               "id": "python",
               "name": "Python"
             }
+          ],
+          "isFeatured": true,
+          "highlights": [
+            "Designed the command-line API & developed the app.",
+            "Enabled endless customisation using YAML config files."
           ]
         },
         {
@@ -288,6 +370,61 @@
               "id": "vuedotjs",
               "name": "Vue"
             }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "openverse",
+      "name": "Openverse",
+      "summary": "Openverse is an open-source search engine for openly-licensed media that is free to modify and reuse.",
+      "projects": [
+        {
+          "id": "frontend",
+          "name": "Search engine",
+          "url": "https://github.com/WordPress/openverse-frontend/",
+          "urlLabel": "GitHub repo for Openverse frontend",
+          "technologies": [
+            {
+              "id": "typescript",
+              "name": "TypeScript"
+            },
+            {
+              "id": "nuxtdotjs",
+              "name": "Nuxt"
+            },
+            {
+              "id": "tailwindcss",
+              "name": "Tailwind"
+            }
+          ],
+          "isFeatured": true,
+          "summary": "The search engine is the primary channel to access the 600M+ openly-licensed creative works in Openverse catalogue.",
+          "highlights": [
+            "Developed a performant web app with server-side rendering.",
+            "Implemented best practices for peak <code>a11y</code>, <code>i18n</code> and <code>L10n</code>."
+          ]
+        },
+        {
+          "id": "backend",
+          "name": "API",
+          "url": "https://github.com/WordPress/openverse-api/",
+          "urlLabel": "GitHub repo for Openverse API",
+          "technologies": [
+            {
+              "id": "python",
+              "name": "Python"
+            },
+            {
+              "id": "django",
+              "name": "Django"
+            }
+          ],
+          "isFeatured": true,
+          "summary": "The API enables access to the Openverse catalogue via a RESTful API for the search engine and 3rd-party integrations.",
+          "highlights": [
+            "Developed the API with OAuth2 auth and rate limits.",
+            "Expanded scope to new media such as audio and 3D models."
           ]
         }
       ]
@@ -320,48 +457,6 @@
       ]
     },
     {
-      "id": "openverse",
-      "name": "Openverse",
-      "projects": [
-        {
-          "id": "frontend",
-          "name": "Search engine",
-          "url": "https://github.com/WordPress/openverse-frontend/",
-          "urlLabel": "GitHub repo for Openverse frontend",
-          "technologies": [
-            {
-              "id": "javascript",
-              "name": "JavaScript"
-            },
-            {
-              "id": "nuxtdotjs",
-              "name": "Nuxt"
-            },
-            {
-              "id": "tailwindcss",
-              "name": "Tailwind"
-            }
-          ]
-        },
-        {
-          "id": "backend",
-          "name": "API",
-          "url": "https://github.com/WordPress/openverse-api/",
-          "urlLabel": "GitHub repo for Openverse API",
-          "technologies": [
-            {
-              "id": "python",
-              "name": "Python"
-            },
-            {
-              "id": "django",
-              "name": "Django"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "seeelaye",
       "name": "see·el·aye",
       "projects": [
@@ -386,6 +481,7 @@
     {
       "id": "vocabulary",
       "name": "Vocabulary",
+      "summary": "Vocabulary is a cohesive design system & component library to unify the web-facing Creative Commons.",
       "projects": [
         {
           "id": "vocabulary",
@@ -401,6 +497,11 @@
               "id": "vuedotjs",
               "name": "Vue"
             }
+          ],
+          "isFeatured": true,
+          "highlights": [
+            "Developed a system of design tokens and Vue components.",
+            "Documented UI patterns using an interactive Storybook."
           ]
         }
       ]
@@ -408,6 +509,7 @@
     {
       "id": "omniport",
       "name": "Omniport",
+      "summary": "Omniport is an end‑to‑end platform and app ecosystem for institutes to deploy their web portal, by and for the students.",
       "projects": [
         {
           "id": "infrastructure",
@@ -423,6 +525,11 @@
               "id": "gnubash",
               "name": "Bash"
             }
+          ],
+          "isFeatured": true,
+          "highlights": [
+            "Designed architecture to be cloud-native and scalable.",
+            "Deployed as micro-services with Docker (+Compose)."
           ]
         },
         {
@@ -439,6 +546,12 @@
               "id": "django",
               "name": "django"
             }
+          ],
+          "isFeatured": true,
+          "highlights": [
+            "Designed to be unopiniated, flexible & customisable.",
+            "Developed plug-&-play system for Django-based apps.",
+            "Added WebSockets support for real-time interactive apps."
           ]
         },
         {
@@ -458,6 +571,7 @@
     {
       "id": "portfolio",
       "name": "Portfolio",
+      "summary": "My portfolio is my small personal slice of the Internet.",
       "projects": [
         {
           "id": "website",
@@ -481,22 +595,11 @@
               "id": "reschume",
               "name": "Réschumé"
             }
-          ]
-        },
-        {
-          "id": "resume",
-          "name": "Résumé",
-          "url": "https://github.com/dhruvkb/resume/",
-          "urlLabel": "GitHub repo for my résumé LaTeX",
-          "technologies": [
-            {
-              "id": "latex",
-              "name": "LaTeX"
-            },
-            {
-              "id": "reschume",
-              "name": "Réschumé"
-            }
+          ],
+          "highlights": [
+            "Deployed as a static site with an automated CI + CD pipeline.",
+            "Built using cutting-edge frontend tech to ship negligible JS.",
+            "Renders a printer-friendly version as the main résumé."
           ]
         }
       ]

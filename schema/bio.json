@@ -41,6 +41,33 @@
         }
       ]
     },
+    "skill": {
+      "title": "Skill",
+      "description": "a keyword that is considered a useful talent in a profession",
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "description": "the name of the skill",
+              "type": "string"
+            },
+            "subskills": {
+              "description": "a collection of skills that are considered as components of this one",
+              "type": "array",
+              "items": { "$ref": "#/$defs/skill" }
+            }
+          },
+          "required": ["name"]
+        },
+        { "type": "string" }
+      ],
+
+      "examples": [
+        "Rust",
+        { "name": "Java", "subskills": ["Swing", { "name": "Android" }] }
+      ]
+    },
     "bio": {
       "title": "Bio",
       "description": "Represents information about a person's identity and ways to contact said person.",
@@ -83,6 +110,12 @@
         "address": {
           "description": "a physical location for an entity such as an organisation or educational institute",
           "$ref": "base.json#/$defs/address"
+        },
+
+        "skills": {
+          "description": "a collection of keywords that are considered useful talents in a profession",
+          "type": "array",
+          "items": { "$ref": "#/$defs/skill" }
         }
       },
       "required": ["name"],
