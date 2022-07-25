@@ -1,7 +1,7 @@
 {
   "name": "reschume",
   "description": "Réschumé is a comprehensive schema for documenting résumés.",
-  "version": "0.0.0-alpha.2",
+  "version": "0.0.0-alpha.3",
   "author": {
     "name": "Dhruv Bhanushali",
     "url": "https://dhruvkb.dev"
