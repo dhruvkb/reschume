@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhruvkb.github.io/reschume/schema/creations.json",
+
+  "title": "Projects",
+  "description": "Represents a collection of epics and projects that were a part of said epics.",
+
+  "type": "array",
+  "items": { "$ref": "#/$defs/epic" },
+
+  "$defs": {
+    "epic": {
+      "title": "Epic",
+      "description": "a large undertaking that encompasses multiple projects",
+
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "an identifier for the epic; A Simple Icons slug might be preferable.",
+          "type": "string"
+        },
+        "name": {
+          "description": "the name of the epic",
+          "type": "string"
+        },
+
+        "summary": {
+          "description": "a short description and introduction of the epic",
+          "type": "string"
+        },
+
+        "url": {
+          "description": "the public-facing URL to access the epic",
+          "type": "string",
+          "format": "uri"
+        },
+
+        "projects": {
+          "description": "an array of the epic's constitutent projects",
+          "type": "array",
+          "items": { "$ref": "#/$defs/project" }
+        }
+      },
+      "required": ["id", "name"],
+
+      "examples": [
+        {
+          "id": "portfolio",
+          "name": "Portfolio",
+          "url": "https://dhruvkb.dev",
+          "summary": "My portfolio is my small personal slice of the Internet.",
+          "projects": [
+            { "id": "website", "name": "Website" },
+            { "id": "resume", "name": "Resume" },
+            { "id": "reschume", "name": "Réschumé" }
+          ]
+        }
+      ]
+    },
+    "project": {
+      "title": "Project",
+      "description": "an endeavour that forms a part of a larger epic",
+
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "an identifier for the project",
+          "type": "string"
+        },
+        "name": {
+          "description": "the name of the project",
+          "type": "string"
+        },
+        "url": {
+          "description": "the public-facing URL to access the project",
+          "type": "string",
+          "format": "uri"
+        },
+
+        "summary": {
+          "description": "a short description and introduction of the project",
+          "type": "string"
+        },
+        "highlights": {
+          "description": "a collection of salient features of the projects, as bullet points",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+
+        "role": {
+          "description": "the part played by the person in the development of the project",
+          "type": "string"
+        },
+
+        "technologies": {
+          "description": "the languages, tools or frameworks used in the developement of the project",
+          "type": "array",
+          "items": { "$ref": "#/$defs/technology" }
+        },
+        "period": {
+          "description": "the time duration during which the project was created and maintained",
+          "$ref": "base.json#/$defs/period"
+        }
+      },
+      "required": ["id", "name"],
+
+      "examples": [
+        {
+          "id": "reschume",
+          "name": "Réschumé",
+          "summary": "A comprehensive schema for documenting résumés.",
+          "highlights": ["", "", ""],
+          "url": "https://dhruvkb.github.io/reschume/",
+          "technologies": [
+            { "id": "json", "name": "JSON" },
+            { "id": "typescript", "name": "TypeScript" }
+          ],
+          "period": {
+            "start": [2022, 6]
+          }
+        }
+      ]
+    },
+
+    "technology": {
+      "title": "Technology",
+      "description": "a language, tool or framework used in the development of a project",
+
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "an identifier for the technology; A Simple Icons slug might be preferable.",
+          "type": "string"
+        },
+        "name": {
+          "description": "the proper name of the technology",
+          "type": "string"
+        }
+      },
+      "required": ["id", "name"],
+
+      "examples": [
+        { "id": "json", "name": "JSON" },
+        { "id": "typescript", "name": "TypeScript" }
+      ]
+    }
+  }
+}

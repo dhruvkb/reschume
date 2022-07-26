@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhruvkb.github.io/reschume/schema/resume.json",
+
+  "type": "object",
+  "properties": {
+    "bio": { "$ref": "bio.json" },
+    "education": { "$ref": "education.json" },
+    "creations": { "$ref": "creations.json" },
+    "work": { "$ref": "work.json" }
+  }
+}
