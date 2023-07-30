@@ -344,8 +344,8 @@
           "role": "Creator",
           "technologies": [
             {
-              "id": "python",
-              "name": "Python"
+              "id": "rust",
+              "name": "Rust"
             }
           ],
           "isFeatured": true,
@@ -362,12 +362,16 @@
           "urlLabel": "User documentation for pls",
           "technologies": [
             {
-              "id": "markdown",
-              "name": "Markdown"
+              "id": "python",
+              "name": "Python"
             },
             {
-              "id": "vuedotjs",
-              "name": "Vue"
+              "id": "mdx",
+              "name": "MDX"
+            },
+            {
+              "id": "astro",
+              "name": "Astro"
             }
           ]
         }
