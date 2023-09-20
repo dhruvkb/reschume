@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhruvkb.github.io/reschume/schema/bio.json",
+
+  "$ref": "#/$defs/bio",
+
+  "$defs": {
+    "profile": {
+      "title": "Profile",
+      "description": "an account on a social media platform or professional network",
+
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "an identifier for the profile; A Simple Icons slug might be preferable.",
+          "type": "string"
+        },
+        "name": {
+          "description": "the name of the network or site containing the profile",
+          "type": "string"
+        },
+        "username": {
+          "description": "the entity's username or handle",
+          "type": "string"
+        },
+        "url": {
+          "description": "the public-facing URL to access the profile",
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": ["id", "name"],
+      "anyOf": [{ "required": ["username"] }, { "required": ["url"] }],
+
+      "examples": [
+        { "id": "github", "name": "GitHub", "username": "dhruvkb" },
+        {
+          "id": "linkedin",
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/dhruvkb"
+        }
+      ]
+    },
+    "skill": {
+      "title": "Skill",
+      "description": "a keyword that is considered a useful talent in a profession",
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "description": "the name of the skill",
+              "type": "string"
+            },
+            "subskills": {
+              "description": "a collection of skills that are considered as components of this one",
+              "type": "array",
+              "items": { "$ref": "#/$defs/skill" }
+            }
+          },
+          "required": ["name"]
+        },
+        { "type": "string" }
+      ],
+
+      "examples": [
+        "Rust",
+        { "name": "Java", "subskills": ["Swing", { "name": "Android" }] }
+      ]
+    },
+    "bio": {
+      "title": "Bio",
+      "description": "Represents information about a person's identity and ways to contact said person.",
+
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "the name of the person",
+          "type": "string"
+        },
+        "image": {
+          "description": "a link to a profile picture; A Gravatar might be best suited for this purpose.",
+          "type": "string",
+          "format": "uri"
+        },
+
+        "label": {
+          "description": "a few words describing the person",
+          "type": "string"
+        },
+        "summary": {
+          "description": "a short summary about the person",
+          "type": "string"
+        },
+        "introduction": {
+          "description": "a longer introduction to the person",
+          "type": "string"
+        },
+
+        "contact": {
+          "description": "a collection of email addresses and phone numbers to contact an entity",
+          "$ref": "base.json#/$defs/contact"
+        },
+        "social": {
+          "description": "a collection of accounts on social media platforms or professional networks",
+          "type": "array",
+          "items": { "$ref": "#/$defs/profile" }
+        },
+
+        "address": {
+          "description": "a physical location for an entity such as an organisation or educational institute",
+          "$ref": "base.json#/$defs/address"
+        },
+
+        "skills": {
+          "description": "a collection of keywords that are considered useful talents in a profession",
+          "type": "array",
+          "items": { "$ref": "#/$defs/skill" }
+        }
+      },
+      "required": ["name"],
+
+      "examples": [
+        {
+          "name": "Dhruv Bhanushali",
+          "image": "https://www.gravatar.com/avatar/0eab64adad056cff2492e7c407a9aa21?s=256",
+          "label": "Software developer and open-source maintainer",
+          "summary": "Software engineer @ WordPress/Openverse • IIT-R '19",
+          "contact": {
+            "emails": ["user@example.com"],
+            "phones": ["+91 9988776655"]
+          },
+          "social": [
+            { "id": "github", "name": "GitHub", "username": "dhruvkb" },
+            {
+              "id": "linkedin",
+              "name": "LinkedIn",
+              "url": "https://www.linkedin.com/in/dhruvkb"
+            }
+          ],
+          "address": {
+            "city": "Navi Mumbai",
+            "state": "Maharashtra",
+            "countryCode": "IN"
+          }
+        }
+      ]
+    }
+  }
+}

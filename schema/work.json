@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhruvkb.github.io/reschume/schema/work.json",
+
+  "title": "Roles",
+  "description": "Represents a collection of organisations and roles perfomed at said organisations.",
+
+  "type": "array",
+  "items": { "$ref": "#/$defs/org" },
+
+  "$defs": {
+    "org": {
+      "title": "Org",
+      "description": "an organisation that employs people in multiple roles",
+
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "an identifier for the organisation; A Simple Icons slug might be preferable.",
+          "type": "string"
+        },
+        "name": {
+          "description": "the full name of the organisation",
+          "type": "string"
+        },
+        "shortName": {
+          "description": "an abbreviated name for the organisation, such as UN for United Nations",
+          "type": "string"
+        },
+
+        "summary": {
+          "description": "a short description and introduction of the organisation",
+          "type": "string"
+        },
+
+        "url": {
+          "description": "the public-facing URL to access the organisation",
+          "type": "string",
+          "format": "uri"
+        },
+        "address": {
+          "description": "the physical location of the organisation workplace",
+          "$ref": "base.json#/$defs/address"
+        },
+
+        "roles": {
+          "description": "an array of roles held at the organisation",
+          "type": "array",
+          "items": { "$ref": "#/$defs/role" }
+        }
+      },
+      "required": ["id", "name"],
+
+      "examples": [
+        {
+          "id": "creative_commons",
+          "name": "Creative Commons",
+          "shortName": "CC",
+          "summary": "Creative Commons is a nonprofit organization that helps overcome legal obstacles to the sharing of knowledge and creativity to address the world’s pressing challenges.",
+          "url": "https://creativecommons.org",
+          "address": {
+            "postBox": 1866,
+            "city": "Mountain View",
+            "state": "California",
+            "countryCode": "US",
+            "postCode": 94042
+          },
+
+          "roles": [
+            { "id": "project_maintainer", "name": "Project maintainer" },
+            { "id": "gsoc_engineer", "name": "GSoC engineer" }
+          ]
+        }
+      ]
+    },
+    "role": {
+      "title": "Role",
+      "description": "a job performed at an organisation",
+
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "an identifier for the role",
+          "type": "string"
+        },
+        "name": {
+          "description": "the job title of the role",
+          "type": "string"
+        },
+
+        "summary": {
+          "description": "a short description and introduction of the role",
+          "type": "string"
+        },
+        "highlights": {
+          "description": "a collection of responsibilities of and accomplishments under the role, as bullet points",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "type": {
+          "description": "the nature of the role in terms of legal obligations",
+          "enum": [
+            "foss-contributor",
+            "part-timer",
+            "full-timer",
+            "intern",
+            "contractor"
+          ]
+        },
+        "location": {
+          "description": "the nature of the role in terms of workplace",
+          "enum": ["in-office", "hybrid", "remote"]
+        },
+        "period": {
+          "description": "the time duration for which the role was held",
+          "$ref": "base.json#/$defs/period"
+        }
+      },
+      "required": ["id", "name"],
+
+      "examples": [
+        {
+          "id": "gsoc_engineer",
+          "name": "GSoC engineer",
+          "summary": "Developed Vocabulary, the design library of Creative Commons.",
+          "highlights": [
+            "Conceived, designed & developed Vocabulary from scratch.",
+            "Initiated & supported Vocabulary integration with CC sites."
+          ],
+          "type": "foss-contributor",
+          "location": "remote",
+          "period": {
+            "start": [2019, 5],
+            "end": [2019, 8]
+          }
+        }
+      ]
+    }
+  }
+}
