@@ -1,3 +1,8 @@
+**Note:**
+This project has been archived and merged into the [portfolio monorepo](https://github.com/dhruvkb/portfolio).
+
+---
+
 <h1 align="center">
   Réschumé
 </h1>
