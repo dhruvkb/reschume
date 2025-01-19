@@ -1,5 +1,5 @@
-**Note:**
-This project has been archived and merged into the [portfolio monorepo](https://github.com/dhruvkb/portfolio).
+> [!CAUTION]
+> This project has been archived. Please refer to its successor, [Récivi](https://recivi.pages.dev), a new kind of résumé for computers and humans, in that order.
 
 ---
 
